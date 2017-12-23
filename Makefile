@@ -1,5 +1,14 @@
-hJOPquiz: hJOPquiz.tex
-	pdflatex hJOPquiz.tex
+NAME=hJOPquiz
+
+all: $(NAME).pdf
+
+$(NAME).pdf: $(NAME).tex
+	pdflatex $<
 
 clean:
-	rm -f hJOPquiz.aux hJOPquiz.log hJOPquiz.out
+	rm -f $(NAME).aux $(NAME).log $(NAME).out
+
+pdfclean: clean
+	rm -f $(NAME).pdf
+
+.PHONY: clean all pdfclean
