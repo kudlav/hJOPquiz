@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{titling}
+\usepackage{url}
 \textwidth 16cm \textheight 24.6cm
 \topmargin -1.3cm
 \oddsidemargin 0cm
@@ -17,7 +18,7 @@
 \Large Ovládání kolejiště pomocí hJOP\\
 \LARGE Sada otázek\\
 \small v1.3}
-\author{Jan Horáček (jan.horacek@kmz-brno.cz)}
+\author{Otázky: Jan Horáček (jan.horacek@kmz-brno.cz)\\Odpovědi: Vladan Kudláč (vladan.kudlac@kmz-brno.cz)}
 \date{\today}
 \maketitle
 
@@ -28,30 +29,36 @@
 
 \item Za jakých podmínek není nutné žádat o traťový souhlas?
 
-\item S~kolika druhy traťových zabezpečovacích zařízení (TZZ) se můžete na
-modulovce TT setkat? Popište základní rozdíly mezi jednotlivými typy TZZ.
+\item \textit{S~kolika druhy traťových zabezpečovacích zařízení (TZZ) se můžete na
+modulovce TT setkat? Popište základní rozdíly mezi jednotlivými typy TZZ.}
 
 \item Lze přestavit výhybku, která je obsazená? Jak?
 
-\item Co je to riziková funkce?
+\item \textbf{Co je to riziková funkce?}
+\\Jedná se o rizikové operace, jako například rušení vlaku, přestavování obsazené výhybky, uvolňování závěru. Je potvrzována potvrzovací sekvencí.
 
-\item Které všechny úkony je nutné vykonat při potvrzování rizikové funkce?
-Uveďte na příkladu nouzového stavění výhybky.
+\item \textbf{Které všechny úkony je nutné vykonat při potvrzování rizikové funkce?
+Uveďte na příkladu nouzového stavění výhybky.}
+\\Je nutné projít potvrzovanou rizikovou funkci a výpis kontrolovaných podmínek. Občas se ve výpisu může objevit čekání na nějakou akci (uzavření přejezdu / přestavení výhybky), v takovém případě je nutné počkat na dokončení těchto úkonů. A poté odsouhlasit seznam kontrolovaných podmínek.
 
-\item Kde se dozvím, co stanice vyváží a dováží?
+\item \textbf{Kde se dozvím, co stanice vyváží a dováží?}
+\\Na každé stanici je výtisk datových listů. Dostupné také online: \url{https://github.com/kmzbrnoI/ds-tt/releases}.
 
-\item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
+\item \textbf{Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
 který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
-v~momentě jeho odjezdu ze stanice.
+v~momentě jeho odjezdu ze stanice.}
+\\V editaci vlaku je v poznámce k soupravě uvedeno, jak naložit s jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice. Přidat do soupravy vagony dle poptávky a plánů. Editovat počet vozů, délku vlaku a popis vagónů dle změn.
 
-\item Jak potlačím zvukovou notifikaci zkratu na kolejišti? Je toto potlačení
-trvalé?
+\item \textbf{Jak potlačím zvukovou notifikaci zkratu na kolejišti? Je toto potlačení
+trvalé?}
+\\Na horní liště je ikona s reproduktorem a křížkem. Potlačení je na 1 minutu.
 
 \item Sousední stanice mě žádá o~traťový souhlas, já ho však chci přijmout až
 za minutu, jak nejlépe sdělit sousední stanici, že má počkat?
 
-\item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po vypnutí
-napájení udělá ovládací panel?
+\item \textbf{Mohu vypnout napájecí zdroj stanice za plného provozu? Co po vypnutí
+napájení udělá ovládací panel?}
+\\Ano, je to možné, ale zastaví to provoz v celém napájeném úseku. Na panelu se objeví široké modré podbarvení.
 
 \item Jak poznám, že je panel připojen k~serveru?
 
@@ -70,8 +77,9 @@ Jak takové zastavení provedu?
 
 \item Jak mohu zrušit jízdní cestu? Popište co nejvíce metod.
 
-\item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta} a
-\textit{posunová cesta}.
+\item \textbf{Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta} a
+\textit{posunová cesta}.}
+\\Jízdní cestou rozumíme cestu pro vlak (vlaková cesta) nebo pro posun (posunová cesta).
 
 \item Vyjmenujte všechny možnosti, jak řídit lokomotivu ručně.
 
@@ -79,17 +87,19 @@ Jak takové zastavení provedu?
 
 \item Kolik lokomotiv může mít souprava?
 
-\item Mohu při restartu systému nechat vlaky v~trati?
+\item \textbf{Mohu při restartu systému nechat vlaky v~trati?}
+\\Pokud je to možné, dojet s vlaky do stanic. Pokud to není možné, je vhodné poznačit údaje v editaci vlaku. Po restartu bude nutné smazat původní vlak na serveru, přesunou lokomotivu do stanice, kde se fyzicky nachází, a vlak znovu založit.
 
 \item Je nutné měnit orientaci stanoviště A~při otáčení vlaku v~koncové
 stanici?
 
-\item Co je to úvazka?
+\item \textit{Co je to úvazka?}
 
 \item Je nutné zadávat vlaku jeho délku? Proč?
 
 \item Jaký význam má barva dopravní kanceláře na panelu? Popiš významy
 jednotlivých barev.
+\\Růžová (neznámý stav), bílá (vzdálený provoz), šedá (místní provoz), žlutá (výběr vozu pro ruční řízení).
 
 \item Jak poznám dopravní a manipulační kolej?
 
@@ -107,38 +117,48 @@ a k~čemu mě to opravňuje?
 \item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a jak
 nákladní doprava funguje?
 
-\item Uveď 3 typy vozů, které jsou pro Ždáňku typické.
+\item \textbf{Uveď 3 typy vozů, které jsou pro Ždáňku typické.}
+\\Vtr, Ztr, Rah.
 
 \item Kdo odpovídá za vlaky ve stanici?
 
-\item Lze vypravit vlak proti STŮJ?
+\item \textbf{Lze vypravit vlak proti STŮJ?}
+\\Ano, na přivolávací návěst.
 
 \item Jak lze přesunout vlak na jinou kolej?
 
 \item Mohu přesunout vlak na libovolný úsek?
+\\Ne, lze to jen na úseky s číslem koleje.
 
-\item Co to je bloková podmínka?
+\item \textit{Co to je bloková podmínka?}
 
-\item Uveď alespoň 4 typy bloků.
+\item \textit{Uveď alespoň 4 typy bloků.}
 
-\item Úvazka je červená, co to znamená?
+\item \textit{Úvazka je červená, co to znamená?}
 
-\item Kam píšu nákladní vozy ve vlaku?
+\item \textbf{Kam píšu nákladní vozy ve vlaku?}
+\\V editaci vlaku do Poznámky k soupravě.
 
-\item Co je to \textit{uLI-daemon} a~jakou má funkci?
+\item \textbf{Co je to \textit{uLI-daemon} a~jakou má funkci?}
+\\Je to APLIKACE umožňující funkci uLI-master. Spouští se startem prvního panelu na dispečerském počítači, při nechtěném ukončení lze znovu zapnout ikonkou na horní liště panelu.
 
-\item Co je to \textit{uLI-master} a~jakou má funkci?
+\item \textbf{Co je to \textit{uLI-master} a~jakou má funkci?}
+\\Je to černá krabička rozměru 7x5 cm, umožňující připojení Roco Multimaus k počítači se spuštěným panelem.
 
-\item Jak převezmu lokomotivy do ručního řízení skrze \textit{uLI-daemon}?
+\item \textbf{Jak převezmu lokomotivy do ručního řízení skrze \textit{uLI-daemon}?}
+\\Kliknutím na číslo vlaku $\rightarrow$ MAUS vlak -- Převzít vlak na multiMaus (uLI-master) a poté zvolit číslo myši s ruč. nebo zvolit ruční řízení dodatečně. Pokud lokomotiva není součástí vlaku, lze kliknout na dopravní kancelář $\rightarrow$ Loko $\rightarrow$ MAUS loko.
 
-\item Jak uvolním lokomotivu z~Rocomaus připojené skrze \textit{uLI-daemon}?
+\item \textbf{Jak uvolním lokomotivu z~Rocomaus připojené skrze \textit{uLI-daemon}?}
+\\Buď na uLI-daemonu zvolit \uv{Uvolnit}, nebo pomocí Shift+STOP na Rocomyši.
 
-\item Ikonka mašinky na Rocomaus bliká, co to znamená?
+\item \textbf{Ikonka mašinky na Rocomaus bliká, co to znamená?}
+\\Lokomotiva není v režimu Ručního řízení. Můžeme ovládat funkce, ale ne jízdu.
 
-\item Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje, co je
-špatně?
+\item \textbf{Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje, co je
+špatně?}
+\\Může to znamenat problém s napájením mašinky nebo s adresou mašinky.
 
-\item Co indikuje modrá LED dioda na \textit{uLI-master}?
+\item \textit{Co indikuje modrá LED dioda na \textit{uLI-master}?}
 
 \item Chci se přihlásit ke stanici pouze na dívání, jak to provedu?
 
