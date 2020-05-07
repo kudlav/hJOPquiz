@@ -9,19 +9,71 @@
 \oddsidemargin 0cm
 \begin{document}
 \thispagestyle{empty}
-\noindent
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3mm plus2pt minus2pt}
 
 \setlength{\droptitle}{-5em}
 
 \title{
 \Large Ovládání kolejiště pomocí hJOP\\
-\LARGE Sada otázek\\
+\LARGE Podklady pro zkoušku oprávnění řízení\\
 \small v1.3}
 \author{Jan Horáček (jan.horacek@kmz-brno.cz)}
 \date{\today}
 \maketitle
 
-\section*{S1 – dispečer}
+Tento dokument obsahuje podklady pro učení a testování způsobilosti řízení
+hJOP. Jeho cílem je nastavit jednotnou míru znalostí obsluhy kolejiště a tím
+předejít zbytečným chybám, zdržování provozu, újmám na majetku a přispět
+k~obecně lepší součinnosti mezi obsluhou kolejiště.
+
+Následující text obsahuje několik úrovní zaškolení – od základní až po tu
+nejpokročilejší. Každá úroveň obsahuje teoretické otázky a praktickou část, ve
+které probíhá řešení zadaných úkolů přímo na kolejišti. Každý, kdo chce získat
+příslušné oprávnění, mus odpovědět na všechny otázky a být schopen vyřešit
+všechny praktické problémy.
+
+\section*{Doporučená metodika zaškolování}
+
+\begin{enumerate}[leftmargin=*]
+\item Nováčka zařadit k~někomu (patronovi) na úrovni, kterou požaduje, ten ho
+naučí základy obsluhy.
+\item Nováčkovi dát k~dispozici tento dokument, on si přečte dotazy, případné
+nejasnosti vyřeší se zaškoleným patronem.
+\item Oprávnění získává nováček výhradně u~školitele – u~kohokoliv s~oprávněním
+A. Školitel vybere otázky z~tohoto dokumentu a nechá nováčka odpovědět. Školitel
+provede s nováčkem praktickou část zkoušky.
+\item Školitel přidává login nováčka do hJOPserveru, nováček je oprávněn řídit.
+\end{enumerate}
+
+\newpage
+
+\section*{S0 – strojvedoucí hJOPdriver}
+
+\subsection*{Teoretická část}
+\begin{enumerate}[leftmargin=*]
+\item Jaký je rozdíl mezi ručním řízením a totálním ručním řízením?
+\item Kdy má v~řízení jízdy přednost ovladač a kdy počítač?
+\item Pouští počítač automaticky funkce houkání apod., když je HV na ovladači?
+\item Jaká specifika platí pro řízení jízdy vlaku s~více lokomotivami v~multitrakci?
+\item Popište jak poznáte, kam až smíte s vlakem jet.
+\item Co se stane při ztrátě wifi spojení?
+\item Co se stane při otevření jiné aplikace?
+\item Co se stane při přetočení displaye?
+\end{enumerate}
+
+\subsection*{Praktická část}
+
+\begin{enumerate}[leftmargin=*]
+\item Demonstrujte převzetí vlaku na ruční řízení.
+\item Demonstrujte uvolnění vlaku z~aplikace.
+\item Demonstrujte řízení lokomotiv v~multitrakci.
+\item Vysvětlete obsah sešitového jízdního řádu.
+\item Demonstrujte komunikaci s~výpravčím.
+\end{enumerate}
+
+\section*{S1 – dispečer základní}
 
 \begin{enumerate}[leftmargin=*]
 \item Co je to závěr a k~čemu slouží?
@@ -149,6 +201,13 @@ mám chovat?
 \item Jaký je smysl těchto zkoušek?
 
 \end{enumerate}
+
+--
+
+TODO:
+ * demonstrujte komunikaci se strojvedoucím
+ * demonstrujte násilné převzetí loko od strojvedoucího zpět
+ * více souprav na jedné koleji
 
 \newpage
 \section*{S2 – pokročilý dispečer}

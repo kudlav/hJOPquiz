@@ -3,7 +3,7 @@ NAME=hJOPquiz
 all: $(NAME).pdf
 
 $(NAME).pdf: $(NAME).tex
-	pdflatex $<
+	texfot pdflatex $<
 
 clean:
 	rm -f $(NAME).aux $(NAME).log $(NAME).out
