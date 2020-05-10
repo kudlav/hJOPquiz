@@ -2,21 +2,23 @@
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
 \usepackage{lmodern}
+\usepackage{graphicx}
 \usepackage{microtype}
 \usepackage{enumitem}
 \usepackage{titling}
-\usepackage{graphicx}
+\usepackage{xcolor}
 \textwidth 16cm \textheight 24.6cm
 \topmargin -1.3cm
 \oddsidemargin 0cm
+
+\newenvironment{solution}{\\ \textcolor{gray}}{}
+
 \begin{document}
 \thispagestyle{empty}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1mm plus2pt minus1pt}
-
 \setlength{\droptitle}{-5em}
 
 \title{
@@ -339,7 +341,7 @@ narazí. Co uděláte?
 
 \item Kde se dozvíte, co stanice vyváží a dováží?
 \solution{Na každé stanici je výtisk datových listů. Dostupné také online:
-\url{https://github.com/kmzbrnoI/ds-tt/releases}}.
+\texttt{https://github.com/kmzbrnoI/ds-tt/releases}}.
 
 \item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
 který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
