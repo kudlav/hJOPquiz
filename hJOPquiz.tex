@@ -1,19 +1,38 @@
 \documentclass[12pt,a4paper]{article}
+\usepackage[ pdfauthor={Jan Horacek}
+           , pdftitle={hJOPquiz},
+           , pdfsubject={Kviz testujici schopnost ridit hJOP},
+           , plainpages=false
+           , pdfpagelabels
+           , unicode
+           , draft=false
+           , colorlinks=false
+           , unicode=true
+           ]{hyperref}
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{graphicx}
+\usepackage{microtype}
 \usepackage{enumitem}
 \usepackage{titling}
-\usepackage{graphicx}
+\usepackage{xcolor}
 \textwidth 16cm \textheight 24.6cm
 \topmargin -1.3cm
 \oddsidemargin 0cm
+
+\ifdefined\issolution
+	\newcommand{\solution}[1]{\\ \textcolor{gray}{#1}}
+\else
+	\newcommand{\solution}[1]{}
+\fi
+
 \begin{document}
 \thispagestyle{empty}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1mm plus2pt minus1pt}
-
 \setlength{\droptitle}{-5em}
 
 \title{
@@ -72,7 +91,7 @@ Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
 \item Kdy má v~řízení jízdy přednost ovladač a kdy počítač?
 \item Pouští počítač automaticky funkce houkání apod., když je HV na ovladači?
 \item Jaká specifika platí pro řízení jízdy vlaku s~více lokomotivami v~multitrakci?
-\item Popište jak poznáte, kam až smíte s vlakem jet.
+\item Popište jak poznáte, kam až smíte s~vlakem jet.
 \item Co se stane při ztrátě wifi spojení?
 \item Co se stane při otevření jiné aplikace?
 \item Co se stane při přetočení displaye?
@@ -85,7 +104,7 @@ Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
 Opravňuje k~řízení menších stanic.
 
 Pro tuto úroveň zaškolení je doporučeno mít zaškolení na úrovni S0. Výjimkou
-je situace, kdy dispečeři používají k řízení jízdy jiné prostředky, než mobilní
+je situace, kdy dispečeři používají k~řízení jízdy jiné prostředky, než mobilní
 aplikaci hJOPdriver.
 
 \subsection{Praktická část}
@@ -116,7 +135,7 @@ serveru. Přihlaste se v~režimu čtenáře, Demonstrujte přihlášení více p
 \item Proveďte smazání soupravy.
 \item Zobrazte seznam souprav v~obvodech všech vámi řízených stanic, vysvětlete
 význam tohoto seznamu.
-\item Upravte výchozí a cílovou stanici soupravy v koncové stanici.
+\item Upravte výchozí a cílovou stanici soupravy v~koncové stanici.
 \end{enumerate}
 
 \subsubsection*{Bloky}
@@ -164,39 +183,62 @@ traťových zabezpečovacích zařízení.
 
 \subsubsection*{Přihlašování, odhlašování}
 \begin{enumerate}[leftmargin=*]
+
 \item Vysvětlete, jak funguje mechanismus přihlašování k~více panelům zároveň.
 Kdy tento mechanismus použít a~kdy naopak ne?
+
 \item Jak poznáte, že je panel připojen k~serveru?
+
 \item Vysvětlete význam přepnutí stanice na místní a dálkový provoz.
+
 \item Popište postup přebírání stanice jiným dispečerem, například při změně
 směn.
+
 \item Chcete se přihlásit ke stanici pouze na dívání, jak to provedete?
-\item Jak potlačíte zvukovou notifikaci zkratu na kolejišti? Je toto potlačení
-trvalé?
+
+\item Jak potlačíte zvukovou notifikaci zkratu na kolejišti? Je toto
+potlačení trvalé?
+\solution{Na horní liště je ikona s~reproduktorem a křížkem. Potlačení je na 1
+minutu.}
+
 \item Můžete z~libovolného pracoviště ovládat libovolnou stanici?
+
 \item Jakými všemi metodami mohu komunikovat s~dispečery sousedních stanic?
+
 \item Ke kolejišti přijde váš kamarád, který si chce zajezdit, ale nemá
 zaškolení (nemá login), co mu můžete povolit a co naopak nesmíte? Jak se k~němu
 máte chovat?
+
 \end{enumerate}
 
 \subsubsection*{Soupravy}
 \begin{enumerate}[leftmargin=*]
 \item Jaký je rozdíl mezi vlakem, lokomotivou a~soupravou? Může se lokomotiva
 sama pohybovat na širé trati?
+
 \item Jak poznáte typ blížícího se vlaku? Jaká rozhodnutí na základě typu
 typicky děláte?
+
 \item Vyjmenujte, jaká předčíslí souprav mají jaký význam.
+
 \item Jaké je typické složení čísla vlaku? Jak poznat z~čísla vlaku adresu
 lokomotivy?
+
 \item Vysvětlete rozdíl mezi směrem vlaku a směrem stanoviště A.
+
 \item Jak poznat, že má vlak správně zadáno stanoviště A?
+
 \item Kdy je a kdy není třeba upravovat výchozí a cílovou stanici?
+
 \item Kolik lokomotiv může mít souprava?
+
 \item Je nutné měnit orientaci stanoviště A~při otáčení vlaku v~koncové
 stanici?
+
 \item Je nutné zadávat vlaku jeho délku a~typ? Proč?
+
 \item Na které místo ve vlaku je možné přivěsit čistící vůz?
+
 \end{enumerate}
 
 \subsubsection*{Bloky}
@@ -252,28 +294,41 @@ stanici?
 \includegraphics[width=0.1\textwidth]{symboly/prej3.png}
 
 \item Kdy je a kdy není nutné žádat o~traťový souhlas?
+
 \item Co je to závěr a k~čemu slouží?
+
 \item Sousední stanice mě žádá o~traťový souhlas, vy ho však chcete přijmout až
 za minutu, jak nejlépe sdělit sousední stanici, že má počkat?
+
 \item Jak poznáte dopravní a manipulační kolej?
+
 \item Jak poznáte směr trati na reliéfu?
+
 \item Úvazka je červená, co to znamená?
+
 \end{enumerate}
 
 \subsubsection*{Jízdní cesty}
 \begin{enumerate}[leftmargin=*]
 \item Má mít vlak v~ručním řízení postavenou jízdní cestu pro jízdu na
 kolejišti?
+
 \item Jak mohu zrušit jízdní cestu? Popište co nejvíce metod.
-\item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta} a
-\textit{posunová cesta}.
+
+\item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta}
+a~\textit{posunová cesta}.
+\solution{Jízdní cestou rozumíme cestu pro vlak (vlaková cesta) nebo pro posun
+(posunová cesta).}
+
 \end{enumerate}
 
 \subsubsection*{Ruční řízení}
 \begin{enumerate}[leftmargin=*]
 \item Vyjmenujte všechny možnosti, jak řídit lokomotivu ručně.
+
 \item Co znamená, když je v~regulátoru zaškrtnuto \textit{totální ruční řízení}
 a k~čemu mě to opravňuje?
+
 \end{enumerate}
 
 \subsubsection*{Krizové scénáře}
@@ -281,33 +336,60 @@ a k~čemu mě to opravňuje?
 \item Jako posunovač máte volnou chvíli, ohlédnete se do sousední stanice a
 vidíte, že dva vlaky jedou proti sobě a nezpomalují, přibližně za 5 s~do sebe
 narazí. Co uděláte?
+
 \item Kdy použít nouzové zastavení celého kolejiště a kdy vybrané soupravy?
+
 \end{enumerate}
 
 \subsubsection*{Odpovědnost}
 \begin{enumerate}[leftmargin=*]
 \item Popište, za co jako dispečer odpovídáte.
+
 \item Co dělat, když na kolejišti něco rozbijete?
+
 \end{enumerate}
 
 \subsubsection*{Vlakotvorba}
 \begin{enumerate}[leftmargin=*]
 \item Popište, podle čeho se rozhodujete jaký vlak kdy a kam poslat.
+
 \item Kde se dozvíte, co stanice vyváží a dováží?
+\solution{Na každé stanici je výtisk datových listů. Dostupné také online:\\
+\url{https://github.com/kmzbrnoI/ds-tt/releases}}.
+
 \item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
 který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
 v~momentě jeho odjezdu ze stanice.
+\solution{V~editaci vlaku je v~poznámce k~soupravě uvedeno, jak naložit
+s~jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice.
+Přidat do soupravy vagony dle poptávky a plánů. Upravit počet vozů, délku
+vlaku a popis vagónů dle změn.}
+
 \item Potřebujete lokomotivní zálohu z~výtopny/depa, jak ji získáte?
+
 \item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
 nákladní doprava funguje?
+
 \item Kam píšete nákladní vozy ve vlaku?
+\solution{V~editaci vlaku do pole \textit{Poznámky} k~soupravě.}
+
 \end{enumerate}
 
 \subsubsection*{Další}
 \begin{enumerate}[leftmargin=*]
 \item Co je to riziková funkce?
+\solution{Jedná se o~rizikové operace, jako například rušení vlaku,
+přestavování obsazené výhybky, uvolňování závěru. Při průběhu rizikové funkce
+je zobrazeno speciální okno, kde je třeba operaci ještě jednou potvrdit.}
+
 \item Které všechny úkony je nutné vykonat při potvrzování rizikové funkce?
 Uveďte na příkladu nouzového stavění výhybky.
+\solution{Je nutné přečíst si potvrzovanou rizikovou funkci a výpis
+kontrolovaných podmínek. Občas se ve výpisu může objevit čekání na nějakou
+akci (uzavření přejezdu / přestavení výhybky), v~takovém případě je nutné
+počkat na dokončení těchto úkonů. A~poté odsouhlasit seznam kontrolovaných
+podmínek.}
+
 \end{enumerate}
 
 
@@ -326,11 +408,25 @@ uLI-daemon.
 \subsection{Teoretická část}
 
 \begin{enumerate}[leftmargin=*]
+
 \item Co je to \textit{uLI-daemon} a~jakou má funkci?
+\solution{Je to aplikace umožňující funkci uLI-master. Spouští se se startem
+prvního panelu na dispečerském počítači, při nechtěném ukončení lze znovu
+zapnout ikonkou na horní liště panelu.}
+
 \item Co je to \textit{uLI-master} a~jakou má funkci?
+\solution{Je to černá krabička rozměru 7×5 cm, umožňující připojení Roco
+Multimaus k~počítači se spuštěným panelem a uLI-daemonem.}
+
 \item Ikonka mašinky na Rocomaus bliká, co to znamená?
-\item Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje, co je
-špatně?
+\solution{Multimaus neovládá žádnou lokomotivu.}
+
+\item Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje,
+co je špatně?
+\solution{Může to znamenat, že není zaškrtnuto \textit{Ruční řízení} (tedy, že
+ovládáte pouze funkce a~nikoliv jízdu) nebo lokomotiva/y uvízla na špíně nebo
+jste na ovladač přidělili špatnou lokomotivu/y.}
+
 \end{enumerate}
 
 
@@ -363,7 +459,7 @@ kolej.
 \item Demonstrujte multitrakci v~ručním ovladači.
 \item Zaveďte předvídaný odjezd vlaku.
 \item Zaveďte na návěstidle režim AB, zrušte režim AB.
-\item Postavte JC s variantními body.
+\item Postavte JC s~variantními body.
 \item Postavte složenou JC s~variantními body.
 \end{enumerate}
 
@@ -403,14 +499,26 @@ kolej.
 
 \item Nouzové závěry kterých bloků se automaticky neruší při volbě \textit{RNZ
 – rušení nouzových závěrů} a je třeba je zrušit ručně?
+
 \item Jaké všechny povely lze vkládat do zásobníku povelů?
+
 \item Zásobník povelů je přepnutý do volby \textit{PV}, je zásobník aktivní?
+
 \item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po vypnutí
 napájení udělá ovládací panel?
+\solution{Ano, je to možné, ale zastaví to provoz v~celém napájeném úseku.
+Symboly na reliéfu zfialoví.}
+
 \item Mohu při restartu hJOP nechat vlaky v~trati?
+\solution{Ano, vlaky můžou zůstat kdekoliv. Při běžné vypínání kolejiště se
+doporučuje dojet do stanic.}
+
 \item Na jaké úseky lze a na jaké nelze přesouvat vlaky?
+
 \item Vysvětlete barvy soupravy předvídaného odjezdu vlaku.
-\item Vysvětlete chování režimu AB u návěstidla.
+
+\item Vysvětlete chování režimu AB u~návěstidla.
+
 \end{enumerate}
 
 \end{document}

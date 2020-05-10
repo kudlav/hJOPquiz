@@ -1,14 +1,15 @@
-NAME=hJOPquiz
+all: hJOPquiz.pdf hJOPquizKey.pdf clean
 
-all: $(NAME).pdf
+hJOPquiz.pdf: hJOPquiz.tex
+	texfot xelatex $<
 
-$(NAME).pdf: $(NAME).tex
-	texfot pdflatex $<
+hJOPquizKey.pdf: hJOPquiz.tex
+	texfot xelatex --jobname=hJOPquizKey "\def\issolution{1} \input{$<}"
 
 clean:
-	rm -f $(NAME).aux $(NAME).log $(NAME).out
+	rm -f *.aux *.log *.out
 
 pdfclean: clean
-	rm -f $(NAME).pdf
+	rm -f *.pdf
 
 .PHONY: clean all pdfclean
