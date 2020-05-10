@@ -362,7 +362,7 @@ který vám právě přijel do stanice? Zpracování manipulačního vlaku konč
 v~momentě jeho odjezdu ze stanice.
 \solution{V~editaci vlaku je v~poznámce k~soupravě uvedeno, jak naložit
 s~jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice.
-Přidat do soupravy vagony dle poptávky a plánů. Editovat počet vozů, délku
+Přidat do soupravy vagony dle poptávky a plánů. Upravit počet vozů, délku
 vlaku a popis vagónů dle změn.}
 
 \item Potřebujete lokomotivní zálohu z~výtopny/depa, jak ji získáte?
@@ -371,7 +371,7 @@ vlaku a popis vagónů dle změn.}
 nákladní doprava funguje?
 
 \item Kam píšete nákladní vozy ve vlaku?
-\solution{V~editaci vlaku do Poznámky k~soupravě.}
+\solution{V~editaci vlaku do pole \textit{Poznámky} k~soupravě.}
 
 \end{enumerate}
 
@@ -379,15 +379,16 @@ nákladní doprava funguje?
 \begin{enumerate}[leftmargin=*]
 \item Co je to riziková funkce?
 \solution{Jedná se o~rizikové operace, jako například rušení vlaku,
-přestavování obsazené výhybky, uvolňování závěru. Je potvrzována potvrzovací
-sekvencí.}
+přestavování obsazené výhybky, uvolňování závěru. Při průběhu rizikové funkce
+je zobrazeno speciální okno, kde je třeba operaci ještě jednou potvrdit.}
 
 \item Které všechny úkony je nutné vykonat při potvrzování rizikové funkce?
 Uveďte na příkladu nouzového stavění výhybky.
-\solution{Je nutné projít potvrzovanou rizikovou funkci a výpis kontrolovaných
-podmínek.  Občas se ve výpisu může objevit čekání na nějakou akci (uzavření
-přejezdu / přestavení výhybky), v~takovém případě je nutné počkat na dokončení
-těchto úkonů. A~poté odsouhlasit seznam kontrolovaných podmínek.}
+\solution{Je nutné přečíst si potvrzovanou rizikovou funkci a výpis
+kontrolovaných podmínek. Občas se ve výpisu může objevit čekání na nějakou
+akci (uzavření přejezdu / přestavení výhybky), v~takovém případě je nutné
+počkat na dokončení těchto úkonů. A~poté odsouhlasit seznam kontrolovaných
+podmínek.}
 
 \end{enumerate}
 
@@ -409,21 +410,22 @@ uLI-daemon.
 \begin{enumerate}[leftmargin=*]
 
 \item Co je to \textit{uLI-daemon} a~jakou má funkci?
-\solution{Je to APLIKACE umožňující funkci uLI-master. Spouští se startem
+\solution{Je to aplikace umožňující funkci uLI-master. Spouští se se startem
 prvního panelu na dispečerském počítači, při nechtěném ukončení lze znovu
 zapnout ikonkou na horní liště panelu.}
 
 \item Co je to \textit{uLI-master} a~jakou má funkci?
-\solution{Je to černá krabička rozměru 7x5 cm, umožňující připojení Roco
+\solution{Je to černá krabička rozměru 7×5 cm, umožňující připojení Roco
 Multimaus k~počítači se spuštěným panelem a uLI-daemonem.}
 
 \item Ikonka mašinky na Rocomaus bliká, co to znamená?
-\solution{Lokomotiva není v~režimu Ručního řízení. Můžeme ovládat funkce, ale
-ne jízdu.}
+\solution{Multimaus neovládá žádnou lokomotivu.}
 
 \item Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje,
 co je špatně?
-\solution{Může to znamenat problém s~napájením mašinky nebo s~adresou mašinky.}
+\solution{Může to znamenat, že není zaškrtnuto \textit{Ruční řízení} (tedy, že
+ovládáte pouze funkce a~nikoliv jízdu) nebo lokomotiva/y uvízla na špíně nebo
+jste na ovladač přidělili špatnou lokomotivu/y.}
 
 \end{enumerate}
 
@@ -502,16 +504,14 @@ kolej.
 
 \item Zásobník povelů je přepnutý do volby \textit{PV}, je zásobník aktivní?
 
-\item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po
-vypnutí napájení udělá ovládací panel?
-\solution{Ano, je to možné, ale zastaví to provoz v~celém napájeném úseku. Na
-panelu se objeví široké modré podbarvení.}
+\item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po vypnutí
+napájení udělá ovládací panel?
+\solution{Ano, je to možné, ale zastaví to provoz v~celém napájeném úseku.
+Symboly na reliéfu zfialoví.}
 
 \item Mohu při restartu hJOP nechat vlaky v~trati?
-\solution{Pokud je to možné, dojet s~vlaky do stanic. Pokud to není možné, je
-vhodné poznačit údaje v~editaci vlaku. Po restartu bude nutné smazat původní
-vlak, předat lokomotivu do stanice, kde se fyzicky nachází, a vlak znovu
-založit.}
+\solution{Ano, vlaky můžou zůstat kdekoliv. Při běžné vypínání kolejiště se
+doporučuje dojet do stanic.}
 
 \item Na jaké úseky lze a na jaké nelze přesouvat vlaky?
 
