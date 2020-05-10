@@ -13,7 +13,7 @@
 \oddsidemargin 0cm
 
 \ifdefined\issolution
-	\newcommand{\solution}{\\ \textcolor{gray}}{}
+	\newcommand{\solution}[1]{\\ \textcolor{gray}{#1}}
 \else
 	\newcommand{\solution}[1]{}
 \fi
@@ -81,7 +81,7 @@ Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
 \item Kdy má v~řízení jízdy přednost ovladač a kdy počítač?
 \item Pouští počítač automaticky funkce houkání apod., když je HV na ovladači?
 \item Jaká specifika platí pro řízení jízdy vlaku s~více lokomotivami v~multitrakci?
-\item Popište jak poznáte, kam až smíte s vlakem jet.
+\item Popište jak poznáte, kam až smíte s~vlakem jet.
 \item Co se stane při ztrátě wifi spojení?
 \item Co se stane při otevření jiné aplikace?
 \item Co se stane při přetočení displaye?
@@ -94,7 +94,7 @@ Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
 Opravňuje k~řízení menších stanic.
 
 Pro tuto úroveň zaškolení je doporučeno mít zaškolení na úrovni S0. Výjimkou
-je situace, kdy dispečeři používají k řízení jízdy jiné prostředky, než mobilní
+je situace, kdy dispečeři používají k~řízení jízdy jiné prostředky, než mobilní
 aplikaci hJOPdriver.
 
 \subsection{Praktická část}
@@ -125,7 +125,7 @@ serveru. Přihlaste se v~režimu čtenáře, Demonstrujte přihlášení více p
 \item Proveďte smazání soupravy.
 \item Zobrazte seznam souprav v~obvodech všech vámi řízených stanic, vysvětlete
 význam tohoto seznamu.
-\item Upravte výchozí a cílovou stanici soupravy v koncové stanici.
+\item Upravte výchozí a cílovou stanici soupravy v~koncové stanici.
 \end{enumerate}
 
 \subsubsection*{Bloky}
@@ -188,7 +188,7 @@ směn.
 
 \item Jak potlačíte zvukovou notifikaci zkratu na kolejišti? Je toto
 potlačení trvalé?
-\solution{Na horní liště je ikona s reproduktorem a křížkem. Potlačení je na 1
+\solution{Na horní liště je ikona s~reproduktorem a křížkem. Potlačení je na 1
 minutu.}
 
 \item Můžete z~libovolného pracoviště ovládat libovolnou stanici?
@@ -350,8 +350,8 @@ narazí. Co uděláte?
 \item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
 který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
 v~momentě jeho odjezdu ze stanice.
-\solution{V editaci vlaku je v poznámce k soupravě uvedeno, jak naložit
-s jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice.
+\solution{V~editaci vlaku je v~poznámce k~soupravě uvedeno, jak naložit
+s~jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice.
 Přidat do soupravy vagony dle poptávky a plánů. Editovat počet vozů, délku
 vlaku a popis vagónů dle změn.}
 
@@ -361,14 +361,14 @@ vlaku a popis vagónů dle změn.}
 nákladní doprava funguje?
 
 \item Kam píšete nákladní vozy ve vlaku?
-\solution{V editaci vlaku do Poznámky k soupravě.}
+\solution{V~editaci vlaku do Poznámky k~soupravě.}
 
 \end{enumerate}
 
 \subsubsection*{Další}
 \begin{enumerate}[leftmargin=*]
 \item Co je to riziková funkce?
-\solution{Jedná se o rizikové operace, jako například rušení vlaku,
+\solution{Jedná se o~rizikové operace, jako například rušení vlaku,
 přestavování obsazené výhybky, uvolňování závěru. Je potvrzována potvrzovací
 sekvencí.}
 
@@ -376,8 +376,8 @@ sekvencí.}
 Uveďte na příkladu nouzového stavění výhybky.
 \solution{Je nutné projít potvrzovanou rizikovou funkci a výpis kontrolovaných
 podmínek.  Občas se ve výpisu může objevit čekání na nějakou akci (uzavření
-přejezdu / přestavení výhybky), v takovém případě je nutné počkat na dokončení
-těchto úkonů. A poté odsouhlasit seznam kontrolovaných podmínek.}
+přejezdu / přestavení výhybky), v~takovém případě je nutné počkat na dokončení
+těchto úkonů. A~poté odsouhlasit seznam kontrolovaných podmínek.}
 
 \end{enumerate}
 
@@ -405,15 +405,15 @@ zapnout ikonkou na horní liště panelu.}
 
 \item Co je to \textit{uLI-master} a~jakou má funkci?
 \solution{Je to černá krabička rozměru 7x5 cm, umožňující připojení Roco
-Multimaus k počítači se spuštěným panelem a uLI-daemonem.}
+Multimaus k~počítači se spuštěným panelem a uLI-daemonem.}
 
 \item Ikonka mašinky na Rocomaus bliká, co to znamená?
-\solution{Lokomotiva není v režimu Ručního řízení. Můžeme ovládat funkce, ale
+\solution{Lokomotiva není v~režimu Ručního řízení. Můžeme ovládat funkce, ale
 ne jízdu.}
 
 \item Ikonka mašinky na Rocomaus trvale svítí, mašinka přesto nereaguje,
 co je špatně?
-\solution{Může to znamenat problém s napájením mašinky nebo s adresou mašinky.}
+\solution{Může to znamenat problém s~napájením mašinky nebo s~adresou mašinky.}
 
 \end{enumerate}
 
@@ -447,7 +447,7 @@ kolej.
 \item Demonstrujte multitrakci v~ručním ovladači.
 \item Zaveďte předvídaný odjezd vlaku.
 \item Zaveďte na návěstidle režim AB, zrušte režim AB.
-\item Postavte JC s variantními body.
+\item Postavte JC s~variantními body.
 \item Postavte složenou JC s~variantními body.
 \end{enumerate}
 
@@ -494,12 +494,12 @@ kolej.
 
 \item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po
 vypnutí napájení udělá ovládací panel?
-\solution{Ano, je to možné, ale zastaví to provoz v celém napájeném úseku. Na
+\solution{Ano, je to možné, ale zastaví to provoz v~celém napájeném úseku. Na
 panelu se objeví široké modré podbarvení.}
 
 \item Mohu při restartu hJOP nechat vlaky v~trati?
-\solution{Pokud je to možné, dojet s vlaky do stanic. Pokud to není možné, je
-vhodné poznačit údaje v editaci vlaku. Po restartu bude nutné smazat původní
+\solution{Pokud je to možné, dojet s~vlaky do stanic. Pokud to není možné, je
+vhodné poznačit údaje v~editaci vlaku. Po restartu bude nutné smazat původní
 vlak, předat lokomotivu do stanice, kde se fyzicky nachází, a vlak znovu
 založit.}
 
@@ -507,7 +507,7 @@ založit.}
 
 \item Vysvětlete barvy soupravy předvídaného odjezdu vlaku.
 
-\item Vysvětlete chování režimu AB u návěstidla.
+\item Vysvětlete chování režimu AB u~návěstidla.
 
 \end{enumerate}
 
