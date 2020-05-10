@@ -1,4 +1,4 @@
-all: hJOPquiz.pdf hJOPquizKey.pdf clean
+all: hJOPquiz.pdf hJOPquizKey.pdf
 
 hJOPquiz.pdf: hJOPquiz.tex
 	texfot xelatex $<
