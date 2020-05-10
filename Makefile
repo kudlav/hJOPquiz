@@ -1,10 +1,10 @@
 all: hJOPquiz.pdf hJOPquizKey.pdf clean
 
 hJOPquiz.pdf: hJOPquiz.tex
-	texfot pdflatex $<
+	texfot xelatex $<
 
 hJOPquizKey.pdf: hJOPquiz.tex
-	texfot pdflatex --jobname=hJOPquizKey "\def\issolution{1} \input{$<}"
+	texfot xelatex --jobname=hJOPquizKey "\def\issolution{1} \input{$<}"
 
 clean:
 	rm -f *.aux *.log *.out
