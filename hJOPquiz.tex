@@ -210,6 +210,14 @@ traťových zabezpečovacích zařízení.
 
 \item Vysvětlete, jak funguje mechanismus přihlašování k~více panelům zároveň.
 Kdy tento mechanismus použít a~kdy naopak ne?
+\solution{Pro přihlášení k~více panelům zároveň je nutné nejdříve spustit
+všechny požadované panely, pak se v~jednom z~nich připojit k~serveru a~ponechat
+zatrhnutou možnost \textit{Autorizovat další panely}. Tím se automaticky
+přihlásí všechny další spuštěné panely. \\ Volbu \textit{Autorizovat další
+spuštěné panely} je vhodné ručně odtrhnout v~případě, kdy se chcete přihlásit
+pouze k~jedné stanici, například jako čtenář. Pokud byste tuto volbu ponechali
+zatrhnutou, všechny ostatní spuštěné panely, na které můžete být přihlášení vy,
+se přehlásí na čtenáře a~vy tak ztratíte možnost ovládat kolejiště.}
 
 \item Jak poznáte, že je panel připojen k~serveru?
 \solution{Vlevo dole na panelu je napsáno \textit{Připojeno k~serveru}}.
@@ -251,35 +259,59 @@ a~nechat ho provádět úkony dispečera, ale musí být pod vašim trvalým doh
 \begin{enumerate}[leftmargin=*]
 \item Jaký je rozdíl mezi vlakem, lokomotivou a~soupravou? Může se lokomotiva
 sama pohybovat na širé trati?
+\solution{Vlak = souprava. Souprava je složena z~jedné nebo více lokomotiv.
+Lokomotiva se na trati typicky pohybuje jako lokomotivní vlak.}
 
 \item Jak poznáte typ blížícího se vlaku? Jaká rozhodnutí na základě typu
 typicky děláte?
+\solution{Z~předčíslí soupravy. Podle typu vlaku například volíte kolej, na
+kterou vlak přijmete: osobní vlaky vždy k~perónu.}
 
 \item Vyjmenujte, jaká předčíslí souprav mají jaký význam.
 
-\item Jaké je typické složení čísla vlaku? Jak poznat z~čísla vlaku adresu
+\item Jaké je typické složení čísla vlaku? Jak poznat z~čísla vlaku DCC adresu
 lokomotivy?
+\solution{Šestimístné číslo vlaku: dvojmístné předčíslí (typ soupravy)
+a~čtyřmístná adresa dekodéru hnacího vozidla.}
 
-\item Vysvětlete rozdíl mezi směrem vlaku a směrem stanoviště A.
+\item Vysvětlete rozdíl mezi možným směrem vlaku a~směrem stanoviště A.
+\solution{Směr vlaku udává možný směr, kterým se vlak může pohybovat. Může být
+jeden nebo i~oba směry. Podle možného směru vlaku se vykresluje šipka nad
+číslem vlaku v~reliéfu. Možný směr vlaku neovlivňuje fyzický směr jízdy
+lokomotivy. Možný směr vlaku je vlastnost vlaku. \\ Orientace stanoviště A je
+vlastnost lokomotivy. Udává, jakým směrem je lokomotiva fyzicky na kolejišti.
+Je nutné jej správně zadat, aby lokomotiva jela správným směrem.}
 
-\item Jak poznat, že má vlak správně zadáno stanoviště A?
+\item Jak poznat, že mají hnací vozidla vlaku správně zadána stanoviště A?
+\solution{Všechny lokomotivy vlaku svítí správným směrem.}
 
-\item Kdy je a kdy není třeba upravovat výchozí a cílovou stanici?
+\item Kdy je a~kdy není třeba upravovat výchozí a~cílovou stanici soupravy?
+\solution{Výchozí a~cílová stanice se automaticky mění ve smyčkách. Pokud vlak
+končí v~jiné stanici, je třeba mu upravit výchozí a~cílovou stanici ručně.
+Vlak, který dorazit do cílové stanice, má své číslo šedě podbarvené.}
 
 \item Kolik lokomotiv může mít souprava?
+\solution{Až 4.}
 
 \item Je nutné měnit orientaci stanoviště A~při otáčení vlaku v~koncové
 stanici?
+\solution{Ne. Naopak, dělat se to nesmí!}
 
 \item Je nutné zadávat vlaku jeho délku a~typ? Proč?
+\solution{Ano. Pro správné zastavování v~zastávkách a~u~perónů ve stanicích.}
 
 \item Na které místo ve vlaku je možné přivěsit čistící vůz?
+\solution{Výhradně hned za lokomotivu.}
 
 \end{enumerate}
 
 \subsubsection*{Bloky}
 \begin{enumerate}[leftmargin=*]
 \item Jak poznáte zkrat na kolejišti? Co s~ním dělat?
+\solution{Fialové podbarvení úseků. Zkrat je typicky způsoben najetím do špatně
+přestavené výhybky: ručně zastavte lokomotivu a~na panelu nouzově přestavte
+výhybku.}
+
 \item Vysvětlete význam následujících symbolů na reliéfu. \\
 \includegraphics[width=0.1\textwidth]{symboly/kol1.png}
 \includegraphics[width=0.1\textwidth]{symboly/kol2.png}
@@ -329,18 +361,30 @@ stanici?
 \includegraphics[width=0.1\textwidth]{symboly/prej2.png}
 \includegraphics[width=0.1\textwidth]{symboly/prej3.png}
 
-\item Kdy je a kdy není nutné žádat o~traťový souhlas?
+\item Kdy je a~kdy není nutné žádat o~traťový souhlas?
+\solution{O~traťový souhlas není nutné žádat, pokud ho mám udělen, nebo pokud
+jsem přihlášený do obou stanic tratě.}
 
 \item Co je to závěr a k~čemu slouží?
+\solution{Závěr je zapevnění bloku proti změně. Typicky například zamknutí
+výhybky. Závěr se uděluje na bloky v jízdní cestě. Na výhybky, výkolejky a
+úvazky lze ručně udělit nouzový závěr volbou \texttt{ZAV>} v~menu bloku.}
 
 \item Sousední stanice mě žádá o~traťový souhlas, vy ho však chcete přijmout až
 za minutu, jak nejlépe sdělit sousední stanici, že má počkat?
+\solution{Napsat zprávu, zavolat, případně nechat žádost minutu pípat.
+Zvuk žádosti lze dočasně potlačit klikem na ikonu v~horním panelu.}
 
-\item Jak poznáte dopravní a manipulační kolej?
+\item Jak poznáte dopravní a~manipulační kolej?
+\solution{Manipulační kolej je ohraničena seřaďovacími návěstidly. Pozor:
+přerušovaný symbol koleje na reliéfu není manipulační kolej! Přerušovaný symbol
+koleje na reliéfu je kolej bez indikace obsazení.}
 
 \item Jak poznáte směr trati na reliéfu?
+\solution{Ze směru šipky úvazky.}
 
 \item Úvazka je červená, co to znamená?
+\solution{Nastala porucha blokové podmínky trati.}
 
 \end{enumerate}
 
@@ -348,8 +392,12 @@ za minutu, jak nejlépe sdělit sousední stanici, že má počkat?
 \begin{enumerate}[leftmargin=*]
 \item Má mít vlak v~ručním řízení postavenou jízdní cestu pro jízdu na
 kolejišti?
+\solution{Ano, vždy musí mít.}
 
 \item Jak mohu zrušit jízdní cestu? Popište co nejvíce metod.
+\solution{(a) Volbou \texttt{RC} na návěstidle, u~které začíná jízdní cesta
+(JC). (b) Postupným nouzovým uvolněním závěrů (\texttt{NUZ}) všech úseků JC.
+Závěr staniční koleje uvolňuje automaticky (neoznačuje se volbou \texttt{NUZ}).}
 
 \item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta}
 a~\textit{posunová cesta}.
@@ -361,27 +409,40 @@ a~\textit{posunová cesta}.
 \subsubsection*{Ruční řízení}
 \begin{enumerate}[leftmargin=*]
 \item Vyjmenujte všechny možnosti, jak řídit lokomotivu ručně.
+\solution{(a) Skrze aplikaci Jerry. (b) Skrze aplikaci hJOPdriver. (c) Pomocí
+Roco Multimaus a~uLI.}
 
-\item Co znamená, když je v~regulátoru zaškrtnuto \textit{totální ruční řízení}
-a k~čemu mě to opravňuje?
+\item Co znamená, když je v~ovladači zaškrtnuto \textit{ruční řízení}
+a k~čemu vás to opravňuje?
+\solution{\textit{Ruční řízení} znamená, že řídíte jízdu vlaku.}
 
 \end{enumerate}
 
 \subsubsection*{Krizové scénáře}
 \begin{enumerate}[leftmargin=*]
-\item Jako posunovač máte volnou chvíli, ohlédnete se do sousední stanice a
-vidíte, že dva vlaky jedou proti sobě a nezpomalují, přibližně za 5 s~do sebe
+\item Jako posunovač máte volnou chvíli, ohlédnete se do sousední stanice
+a~vidíte, že dva vlaky jedou proti sobě a~nezpomalují, přibližně za 5 s~do sebe
 narazí. Co uděláte?
+\solution{Klik na červenou ikonku na horní liště panelu \textit{Zastavit DCC
+na celém kolejišti}. Poté otevřít ovladač obou souprav, zastavit je a pustit
+DCC. Tím lokomotivy zůstanou stát a~celé kolejiště se rozjede.}
 
-\item Kdy použít nouzové zastavení celého kolejiště a kdy vybrané soupravy?
+\item Kdy použít nouzové zastavení celého kolejiště a~kdy vybrané soupravy?
+\solution{Nouzové zastavení celého kolejiště používejte v~případě, kdy není
+možné vlak zastavit jinak. Typicky například proto, že se vlak nenachází
+v~obvodu vámi řízené stanice. Nouzové zastavení celého kolejiště je krajní
+volbou!}
 
 \end{enumerate}
 
 \subsubsection*{Odpovědnost}
 \begin{enumerate}[leftmargin=*]
 \item Popište, za co jako dispečer odpovídáte.
+\solution{Za všechny soupravy v~obvodu vámi řízených stanic – za to, že se
+nepoškodí.}
 
 \item Co dělat, když na kolejišti něco rozbijete?
+\solution{Nahlásit starší obsluze.}
 
 \end{enumerate}
 
@@ -402,6 +463,7 @@ Přidat do soupravy vagony dle poptávky a plánů. Upravit počet vozů, délku
 vlaku a popis vagónů dle změn.}
 
 \item Potřebujete lokomotivní zálohu z~výtopny/depa, jak ji získáte?
+\solution{Zavoláte/napíšete do depa a~zálohu si vyžádáte.}
 
 \item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
 nákladní doprava funguje?
