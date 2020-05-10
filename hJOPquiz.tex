@@ -10,7 +10,6 @@
            , unicode=true
            ]{hyperref}
 \usepackage[czech]{babel}
-\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{microtype}
@@ -86,14 +85,40 @@ Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
 
 \subsection{Teoretická část}
 \begin{enumerate}[leftmargin=*]
-\item Jaký je rozdíl mezi ručním řízením a totálním ručním řízením?
+\item K čemu slouží v~ovladači volba \textit{Ruční řízení}?
+\solution{Při nezaškrtnutém \textit{Ručním řízení} řídíte pouze funkce, nikoliv
+jízdu. Po zaškrtnutí \textit{Ruční řízení} řídíte i~jízdu vlaku.}
+
 \item Kdy má v~řízení jízdy přednost ovladač a kdy počítač?
+\solution{Pokud je zaškrtnuto \textit{Ruční řízení}, řídíte jízdu vlaku
+výhradně vy, příkazy počítače se ignorují. Pokud je volba \textit{Ruční řízení}
+odškrtnutá, jízdu řídí počítač, funkce však řídíte vy (funkce počítače se
+ignorují nezávisle na zaškrtnutí \textit{Ruční řízení}).}
+
 \item Pouští počítač automaticky funkce houkání apod., když je HV na ovladači?
+\solution{Ne. Funkce jsou vždy na strojvedoucím.}
+
 \item Jaká specifika platí pro řízení jízdy vlaku s~více lokomotivami v~multitrakci?
-\item Popište jak poznáte, kam až smíte s~vlakem jet.
+\solution{U~všech lokomotiv, které chcete řídit v~multitrakci, musíte
+zaškrtnout \textit{Multitrakce}. Funkce se řídí zvlášť, směr se řídí zvlášť,
+rychlost se řídí dohromady. Po dokončení řízení musíte uvolnit všechny
+lokomotivy.}
+
+\item Popište, jak poznáte, kam až smíte s~vlakem jet.
+\solution{Strojvedoucí musí kontrolovat všechna návěstidla ve své cestě a~řídit
+se jimi. Pokud nejsou návěstidla fyzicky osazena, musí se domluvit
+s~dispečerem, kam až smí jet, nebo si otevřít panel obvodu, ve kterém se
+pohybuje, a kontrolovat návěsti na něm.}
+
 \item Co se stane při ztrátě wifi spojení?
+\solution{Řízené lokomotivy se navrátí do kontroly počítače.}
+
 \item Co se stane při otevření jiné aplikace?
+\solution{Všechny řízené lokomotivy plynule zastaví.}
+
 \item Co se stane při přetočení displaye?
+\solution{Všechny řízené lokomotivy plynule zastaví.}
+
 \end{enumerate}
 
 \newpage
