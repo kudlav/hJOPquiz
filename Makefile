@@ -1,12 +1,10 @@
-NAME=hJOPquiz
+all: hJOPquiz.pdf hJOPquizKey.pdf clean
 
-all: $(NAME).pdf $(NAME)Key.pdf
-
-$(NAME).pdf: $(NAME).tex
+hJOPquiz.pdf: hJOPquiz.tex
 	texfot pdflatex $<
 
-$(NAME)Key.pdf: $(NAME)Key.tex
-	texfot pdflatex $<
+hJOPquizKey.pdf: hJOPquiz.tex
+	texfot pdflatex --jobname=hJOPquizKey "\def\issolution{1} \input{$<}"
 
 clean:
 	rm -f *.aux *.log *.out

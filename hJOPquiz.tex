@@ -12,7 +12,11 @@
 \topmargin -1.3cm
 \oddsidemargin 0cm
 
-\newenvironment{solution}{\\ \textcolor{gray}}{}
+\ifdefined\issolution
+	\newcommand{\solution}{\\ \textcolor{gray}}{}
+\else
+	\newcommand{\solution}[1]{}
+\fi
 
 \begin{document}
 \thispagestyle{empty}
