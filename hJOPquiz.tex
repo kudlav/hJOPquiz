@@ -318,6 +318,7 @@ výhybku.}
 \item Vysvětlete význam následujících symbolů na reliéfu. \\
 \includegraphics[width=0.1\textwidth]{symboly/kol1.png}
 \includegraphics[width=0.1\textwidth]{symboly/kol2.png}
+\includegraphics[width=0.1\textwidth]{symboly/kol2.png}
 \includegraphics[width=0.1\textwidth]{symboly/kol3.png}
 \includegraphics[width=0.1\textwidth]{symboly/kol4.png}
 \includegraphics[width=0.1\textwidth]{symboly/kol22.png}
@@ -453,25 +454,44 @@ nepoškodí.}
 
 \subsubsection*{Vlakotvorba}
 \begin{enumerate}[leftmargin=*]
-\item Popište, podle čeho se rozhodujete jaký vlak kdy a kam poslat.
+\item Jaké jsou základní režimy fungování kolejiště z~hlediska vlakotvorby
+a oběhů vlaků?
+\solution{Neježdění nákladní dopravy × ježdění nákladní dopravy. \\
+Ježdění v~taktu × provoz podle grafikonu.}
 
-\item Kde se dozvíte, co stanice vyváží a dováží?
-\solution{Na každé stanici je výtisk datových listů. Dostupné také online:\\
+\item Popište, podle čeho se rozhodujete jaký vlak kdy a~kam poslat.
+\solution{Průběžně sledujete stav v~sousedních stanicích a~snažíte se jim vyjít
+vstříc. Pokud mají plno, neposíláte vlaky a~místo toho třeba posunujete. Pokud
+se do sousední stanice chystá osobní vlak, pošlete taky osobní, abyste
+modelovali přípoje atp. Ideální je si na začátku směny se sousedními stanicemi
+dohodnout takt (např. \uv{jeden vlak za jeden vlak}), případně jezdit podle
+grafikonu.}
+
+\item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
+nákladní doprava funguje?
+\solution{Pokud se \textit{jezdí nákladní doprava}, každý vůz každého
+manipulačního vlaku má přesně stanoveno odkud a~kam jede. Např. \textit{první
+vůz Ztr v~soupravě 804734 jede z~Čejče k~silu Uhřice}. Tyto informace jsou
+zapsány v~poznámce soupravy. Obsluhy stanic se podle nich řídí. \\ Vůz je
+považován za vyložený/naložený po průjezdu jednoho Mn vlaku: první Mn vlak vůz
+přiveze, po druhý vlak zůstává vůz ve stanici, třetí Mn vlak vůz odváží.}
+
+\item Kde se dozvíte, jaké zboží a~jakými vozy stanice vyváží a~dováží?
+\solution{\textit{Platné pozue pro modulovku TT} \\ Na každé stanici je výtisk
+datových listů. Dostupné také online:\\
 \url{https://github.com/kmzbrnoI/ds-tt/releases}}.
 
 \item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
 který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
 v~momentě jeho odjezdu ze stanice.
-\solution{V~editaci vlaku je v~poznámce k~soupravě uvedeno, jak naložit
-s~jednotlivými vagony. Vyřešit požadavky, které se týkají aktuální stanice.
-Přidat do soupravy vagony dle poptávky a plánů. Upravit počet vozů, délku
-vlaku a popis vagónů dle změn.}
+\solution{\textit{Relevantní pouze při ježdění nákladní dopravy.} \\ V~editaci
+vlaku je v~poznámce k~soupravě uvedeno, jak naložit s~jednotlivými vagóny.
+Vyřešte požadavky, které se týkají vaši stanice (připojení a~odpojení vozů).
+Přidejte do soupravy vagóny dle poptávky ar~plánů. Upravte počet vozů, délku
+vlaku a~popis vagónů dle změn.}
 
 \item Potřebujete lokomotivní zálohu z~výtopny/depa, jak ji získáte?
 \solution{Zavoláte/napíšete do depa a~zálohu si vyžádáte.}
-
-\item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
-nákladní doprava funguje?
 
 \item Kam píšete nákladní vozy ve vlaku?
 \solution{V~editaci vlaku do pole \textit{Poznámky} k~soupravě.}
@@ -628,8 +648,14 @@ doporučuje dojet do stanic.}
 úseky (zhlaví,  záhlaví, trať, ...) soupravy přesouvat nelze.}
 
 \item Vysvětlete barvy soupravy předvídaného odjezdu vlaku.
+\solution{
+Inverzní pozadí a popředí: odpočet času nezačal plynout. \\
+Modré pozadí: do odjezdu zbývá více než 30 s. \\
+Žluté pozadí: do odjezdu zbývá méně než 30 s.}
 
 \item Vysvětlete chování režimu AB u~návěstidla.
+\solution{Režim AB je spojený s~návěstidlem a~konkrétní jízdní cestou. Tento
+režim opakovaně staví jízdní cestu po jejím projetí.}
 
 \end{enumerate}
 
