@@ -1,9 +1,9 @@
 all: hJOPquiz.pdf hJOPquizKey.pdf
 
-hJOPquiz.pdf: hJOPquiz.tex
+hJOPquiz.pdf: hJOPquiz.tex symboly
 	texfot xelatex $<
 
-hJOPquizKey.pdf: hJOPquiz.tex
+hJOPquizKey.pdf: hJOPquiz.tex symboly
 	texfot xelatex --jobname=hJOPquizKey "\def\issolution{1} \input{$<}"
 
 clean:
