@@ -22,9 +22,9 @@
 
 \def\solution#1{\ifsolution \par{\color{gray}#1}\fi}
 
-\def\symbol#1#2#3{% soubor, škála, popisek
-\includegraphics[width=#2\textwidth]{#1}%
-     \ifsolution\ \parbox{.3\textwidth}{\color{gray}\raggedright #3}\fi
+\def\symbol#1#2#3{ % filename, scale, description
+    \includegraphics[width=#2\textwidth]{#1}
+    \ifsolution \parbox{.3\textwidth}{\color{gray}\raggedright #3}\fi
 }
 
 
@@ -319,56 +319,56 @@ přestavené výhybky: ručně zastavte lokomotivu a~na panelu nouzově přestav
 výhybku.}
 
 \item Vysvětlete význam následujících symbolů na reliéfu. \\
-\symbol{symboly/kol1.png}{0.1}{Popisek}
-\symbol{symboly/kol2.png}{0.1}{Popisek}
-\symbol{symboly/kol2.png}{0.1}{Popisek}
-\symbol{symboly/kol3.png}{0.1}{Popisek}
-\symbol{symboly/kol4.png}{0.1}{Popisek}
-\symbol{symboly/kol22.png}{0.1}{Popisek}
-\symbol{symboly/kol8.png}{0.1}{Popisek}
+\symbol{symboly/kol1.png}{0.1}{Kolej s~prostředky pro kontrolu volnosti volná.}
+\symbol{symboly/kol2.png}{0.1}{Kolej obsazená.}
+\symbol{symboly/kol3.png}{0.1}{Kolej volná, závěr vlakové cesty.}
+\symbol{symboly/kol4.png}{0.1}{Kolej volná, závěr posunové cesty.}
+\symbol{symboly/kol22.png}{0.1}{Kolej volná, zkrat.}
+\symbol{symboly/kol8.png}{0.1}{Kolej volná, výpadek DCC.}
 
-\symbol{symboly/hlnav16.png}{0.1}{Popisek}
-\symbol{symboly/hlnav1.png}{0.1}{Popisek}
-\symbol{symboly/hlnav2.png}{0.1}{Popisek}
-\symbol{symboly/hlnav3.png}{0.1}{Popisek}
-\symbol{symboly/hlnav5.png}{0.1}{Popisek}
-\symbol{symboly/hlnav6.png}{0.1}{Popisek}
-\symbol{symboly/hlnav8.png}{0.1}{Popisek}
+\symbol{symboly/hlnav16.png}{0.1}{Hlavní návěstidlo nekomunikuje.}
+\symbol{symboly/hlnav1.png}{0.1}{Základní stav.}
+\symbol{symboly/hlnav2.png}{0.1}{Povolující návěst pro vlak (mimo PN).}
+\symbol{symboly/hlnav3.png}{0.1}{Povolující návěst pro posun. Přerušovaně:
+přivolávací návěst.}
+\symbol{symboly/hlnav5.png}{0.1}{Návěstidlo mění návěst / návěstidlo zhaslé.}
+\symbol{symboly/hlnav6.png}{0.1}{Zamknuto do návěsti stůj.}
+\symbol{symboly/hlnav8.png}{0.1}{Základní stav + volba vlakové cesty.}
 
-\symbol{symboly/senav6.png}{0.1}{Popisek}
-\symbol{symboly/senav2.png}{0.1}{Popisek}
-\symbol{symboly/senav3.png}{0.1}{Popisek}
-\symbol{symboly/senav4.png}{0.1}{Popisek}
-\symbol{symboly/senav8.png}{0.1}{Popisek}
+\symbol{symboly/senav6.png}{0.1}{Seřaďovací návěstidlo nekomunikuje.}
+\symbol{symboly/senav2.png}{0.1}{Povolující návěst.}
+\symbol{symboly/senav3.png}{0.1}{Návěstidlo mění návěst / návěstidlo zhaslé.}
+\symbol{symboly/senav4.png}{0.1}{Zamknuto do návěsti posun zakázán.}
+\symbol{symboly/senav8.png}{0.1}{Základní stav + volba posunové cesty.}
 
-\symbol{symboly/vyh4.png}{0.1}{Popisek}
-\symbol{symboly/vyh1.png}{0.1}{Popisek}
-\symbol{symboly/vyh2.png}{0.1}{Popisek}
-\symbol{symboly/vyh3.png}{0.1}{Popisek}
-\symbol{symboly/vyh5.png}{0.1}{Popisek}
-\symbol{symboly/vyh6.png}{0.1}{Popisek}
-\symbol{symboly/vyh28.png}{0.1}{Popisek}
-\symbol{symboly/vyh37.png}{0.1}{Popisek}
-\symbol{symboly/vyh38.png}{0.1}{Popisek}
-\symbol{symboly/vyh39.png}{0.1}{Popisek}
+\symbol{symboly/vyh4.png}{0.1}{Ztráta komunikace.}
+\symbol{symboly/vyh1.png}{0.1}{Přímý směr + úsek volný.}
+\symbol{symboly/vyh2.png}{0.1}{Odbočný směr + úsek volný.}
+\symbol{symboly/vyh3.png}{0.1}{Úsek volný + ztráta dohledu.}
+\symbol{symboly/vyh5.png}{0.1}{Úsek obsazen.}
+\symbol{symboly/vyh6.png}{0.1}{Úsek obsazen + ztráta dohledu.}
+\symbol{symboly/vyh28.png}{0.1}{Výpadek napájení zesilovače (napěťová výluka) +
+závěr vlakové cesty.}
+\symbol{symboly/vyh37.png}{0.1}{Výhybka nevybavená zařízením pro kontrolu polohy.}
+\symbol{symboly/vyh38.png}{0.1}{S~kontrolou volnosti kolejového úseku + úsek obsazen.}
+\symbol{symboly/vyh39.png}{0.1}{Bez kontroly volnosti kolejového úseku.}
 
-\symbol{symboly/vyk19.png}{0.1}{Popisek}
-\symbol{symboly/vyk1.png}{0.1}{Popisek}
-\symbol{symboly/vyk2.png}{0.1}{Popisek}
-\symbol{symboly/vyk3.png}{0.1}{Popisek}
-\symbol{symboly/vyk4.png}{0.1}{Popisek}
-\symbol{symboly/vyk5.png}{0.1}{Popisek}
-\symbol{symboly/vyk6.png}{0.1}{Popisek}
+\symbol{symboly/vyk19.png}{0.1}{Ztráta komunikace.}
+\symbol{symboly/vyk1.png}{0.1}{Na koleji + úsek volný.}
+\symbol{symboly/vyk2.png}{0.1}{Sklopená + úsek volný.}
+\symbol{symboly/vyk3.png}{0.1}{Na koleji + úsek obsazen.}
+\symbol{symboly/vyk4.png}{0.1}{Sklopená + úsek obsazen.}
+\symbol{symboly/vyk5.png}{0.1}{Ztráta dohledu + úsek volný.}
+\symbol{symboly/vyk6.png}{0.1}{Ztráta dohledu + úsek obsazen.}
 
-\symbol{symboly/ez6.png}{0.05}{Popisek}
-\symbol{symboly/ez1.png}{0.05}{Popisek}
-\symbol{symboly/ez2.png}{0.05}{Popisek}
-\symbol{symboly/ez3.png}{0.05}{Popisek}
-\symbol{symboly/ez5.png}{0.05}{Popisek}
+\symbol{symboly/ez6.png}{0.05}{Ztráta komunikace.}
+\symbol{symboly/ez1.png}{0.05}{Klíč zapevněn.}
+\symbol{symboly/ez3.png}{0.05}{Klíč vyjmut.}
+\symbol{symboly/ez5.png}{0.05}{Ztráta kontroly.}
 
-\symbol{symboly/prej1.png}{0.1}{Popisek}
-\symbol{symboly/prej2.png}{0.1}{Popisek}
-\symbol{symboly/prej3.png}{0.1}{Popisek}
+\symbol{symboly/prej1.png}{0.1}{Otevřen.}
+\symbol{symboly/prej2.png}{0.1}{Uzavřen povelem dispečera.}
+\symbol{symboly/prej3.png}{0.1}{Nouzově otevřen.}
 
 \item Kdy je a~kdy není nutné žádat o~traťový souhlas?
 \solution{O~traťový souhlas není nutné žádat, pokud ho mám udělen, nebo pokud
@@ -594,35 +594,45 @@ kolej.
 
 \begin{enumerate}[leftmargin=*]
 \item Vysvětlete význam následujících symbolů. \\
-\symbol{symboly/kol5.png}{0.1}{Popisek}
-\symbol{symboly/kol7.png}{0.1}{Popisek}
-\symbol{symboly/kol20.png}{0.1}{Popisek}
-\symbol{symboly/kol21.png}{0.1}{Popisek}
+\symbol{symboly/kol5.png}{0.1}{Kolej volná + nerozlišený závěr.}
+\symbol{symboly/kol7.png}{0.1}{Volná + nerozlišený závěr + varovný štítek.}
+\symbol{symboly/kol20.png}{0.1}{Volná + výluka.}
+\symbol{symboly/kol21.png}{0.1}{Volná + varovný štítek.}
 
-\symbol{symboly/hlnav9.png}{0.1}{Popisek}
-\symbol{symboly/hlnav15.png}{0.1}{Popisek}
-\symbol{symboly/hlnav17.png}{0.1}{Popisek}
-\symbol{symboly/hlnav18.png}{0.1}{Popisek}
-\symbol{symboly/hlnav19.png}{0.1}{Popisek}
-\symbol{symboly/senav14.png}{0.1}{Popisek}
+\symbol{symboly/hlnav9.png}{0.1}{Povolující návěst pro vlak (mimo PN) + volba
+vlakové cesty.}
+\symbol{symboly/hlnav15.png}{0.1}{Základní stav + volba nouzové cesty.}
+\symbol{symboly/hlnav17.png}{0.1}{Povolující návěst pro vlak (mimo PN) +
+aktivní režim AB.}
+\symbol{symboly/hlnav18.png}{0.1}{Základní stav + aktivní režim AB.}
+\symbol{symboly/hlnav19.png}{0.1}{Zhaslé/změna návěsti + aktivní režim AB.}
+\symbol{symboly/senav14.png}{0.1}{Základní stav seřaďovacího návěstidla + volba
+nouzové posunové cesty.}
 
-\symbol{symboly/vyh7.png}{0.1}{Popisek}
-\symbol{symboly/vyh8.png}{0.1}{Popisek}
-\symbol{symboly/vyh14.png}{0.1}{Popisek}
-\symbol{symboly/vyh21.png}{0.1}{Popisek}
-\symbol{symboly/vyh22.png}{0.1}{Popisek}
-\symbol{symboly/vyh23.png}{0.1}{Popisek}
-\symbol{symboly/vyh24.png}{0.1}{Popisek}
-\symbol{symboly/vyh25.png}{0.1}{Popisek}
-\symbol{symboly/vyh26.png}{0.1}{Popisek}
-\symbol{symboly/vyh27.png}{0.1}{Popisek}
+\symbol{symboly/vyh7.png}{0.1}{Úsek obsazen + nouzový závěr výhybky.}
+\symbol{symboly/vyh8.png}{0.1}{Úsek obsazen + nouzový závěr výhybky + ztráta
+dohledu.}
+\symbol{symboly/vyh14.png}{0.1}{Úsek volný + výhybka hlásí obě polohy.}
+\symbol{symboly/vyh21.png}{0.1}{Závěr vlakové cesty + nouzový závěr výhybky +
+úsek volný.}
+\symbol{symboly/vyh22.png}{0.1}{Závěr posunové cesty + nouzový závěr + úsek
+volný.}
+\symbol{symboly/vyh23.png}{0.1}{Nerozlišený závěr jízdní cesty + úsek volný
+(potenciálně nouzový závěr výhybky).}
+\symbol{symboly/vyh24.png}{0.1}{Nerozlišený závěr jízdní cesty + úsek volný +
+varovný štítek.}
+\symbol{symboly/vyh25.png}{0.1}{Varovný štítek + úsek volný + ztráta dohledu.}
+\symbol{symboly/vyh26.png}{0.1}{Výluka + nouzový závěr výhybky + úsek volný.}
+\symbol{symboly/vyh27.png}{0.1}{Výluka + nouzový závěr výhybky + úsek volný +
+ztráta dohledu.}
 
-\symbol{symboly/vyk9.png}{0.1}{Popisek}
-\symbol{symboly/vyk10.png}{0.1}{Popisek}
-\symbol{symboly/vyk11.png}{0.1}{Popisek}
-\symbol{symboly/vyk17.png}{0.1}{Popisek}
+\symbol{symboly/vyk9.png}{0.1}{Nouzový závěr výkolejky + úsek volný.}
+\symbol{symboly/vyk10.png}{0.1}{Nouzový závěr + úsek obsazen + varovný štítek.}
+\symbol{symboly/vyk11.png}{0.1}{Nouzový závěr + úsek obsazen + varovný štítek +
+ztráta dohledu.}
+\symbol{symboly/vyk17.png}{0.1}{Nouzový závěr + úsek volný + výluka.}
 
-\symbol{symboly/ez4.png}{0.05}{Popisek}
+\symbol{symboly/ez4.png}{0.05}{Klíč vyjmut + varovný štítek.}
 
 \item Nouzové závěry kterých bloků se automaticky neruší při volbě \textit{RNZ
 – rušení nouzových závěrů} a~je třeba je zrušit ručně?
