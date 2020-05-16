@@ -20,32 +20,34 @@
 \topmargin -1.3cm
 \oddsidemargin 0cm
 
-\ifdefined\issolution
-	\newcommand{\solution}[1]{\\ \textcolor{gray}{#1}}
-\else
-	\newcommand{\solution}[1]{}
-\fi
+\def\solution#1{\ifsolution \par{\color{gray}#1}\fi}
+
+\def\symbol#1#2#3{% soubor, škála, popisek
+\includegraphics[width=#2\textwidth]{#1}%
+     \ifsolution\ \parbox{.3\textwidth}{\color{gray}\raggedright #3}\fi
+}
+
 
 \begin{document}
 \thispagestyle{empty}
 
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{1mm plus2pt minus1pt}
+\setlength{\parskip}{.4\baselineskip plus2pt minus1pt}
 \setlength{\droptitle}{-5em}
 
-\title{
-\Large Ovládání kolejiště pomocí hJOP\\
-\LARGE Podklady pro zkoušku oprávnění řízení\\
-\ifdefined\issolution
-\normalsize Včetně řešení \\
+\title{\bfseries
+{\Large Ovládání kolejiště pomocí hJOP\\}
+{\LARGE Podklady pro zkoušku oprávnění řízení\\}
+\ifsolution
+{\Large \color{gray}včetně řešení\\}
 \fi
-\small v2.0-alpha}
+{\small v2.0-alpha}}
 \author{Jan Horáček (jan.horacek@kmz-brno.cz)}
 \date{\today}
 \maketitle
 
 Tento dokument obsahuje podklady pro učení a testování způsobilosti řízení
-hJOP. Jeho cílem je nastavit jednotnou míru znalostí obsluhy kolejiště a~tím
+hJOP. Jeho cílem je nastavit jednotnou míru znalostí obsluhy kolejiště, a~tím
 předejít zbytečným chybám, zdržování provozu, újmám na majetku a~přispět
 k~obecně lepší součinnosti mezi obsluhou kolejiště.
 
@@ -64,7 +66,8 @@ naučí základy obsluhy.
 \item Nováčkovi dát k~dispozici tento dokument, on si přečte dotazy, případné
 nejasnosti vyřeší se zaškoleným patronem.
 \item Oprávnění získává nováček výhradně u~školitele – u~kohokoliv s~oprávněním
-A. Školitel vybere otázky z~tohoto dokumentu a~nechá nováčka odpovědět. Školitel
+A.
+Školitel vybere otázky z~tohoto dokumentu a~nechá nováčka odpovědět. Školitel
 provede s~no\-váč\-kem praktickou část zkoušky.
 \item Školitel přidává login nováčka do hJOPserveru, nováček je oprávněn řídit.
 \end{enumerate}
@@ -119,7 +122,7 @@ pohybuje, a kontrolovat návěsti na něm.}
 \item Co se stane při otevření jiné aplikace?
 \solution{Všechny řízené lokomotivy plynule zastaví.}
 
-\item Co se stane při přetočení displaye?
+\item Co se stane při přetočení displeje?
 \solution{Všechny řízené lokomotivy plynule zastaví.}
 
 \end{enumerate}
@@ -131,7 +134,7 @@ pohybuje, a kontrolovat návěsti na něm.}
 Opravňuje k~řízení menších stanic.
 
 Pro tuto úroveň zaškolení je doporučeno mít zaškolení na úrovni S0. Výjimkou
-je situace, kdy dispečeři používají k~řízení jízdy jiné prostředky, než mobilní
+je situace, kdy dispečeři používají k~řízení jízdy jiné prostředky než mobilní
 aplikaci hJOPdriver.
 
 \subsection{Praktická část}
@@ -139,7 +142,7 @@ aplikaci hJOPdriver.
 \subsubsection*{Přihlášení, odhlášení}
 \begin{enumerate}[leftmargin=*]
 \item Spusťte panel. Připojte se k~serveru, přihlaste se, odpojte se od
-serveru. Přihlaste se v~režimu čtenáře, Demonstrujte přihlášení více panelů.
+serveru. Přihlaste se v~režimu čtenáře, demonstrujte přihlášení více panelů.
 \item Proveďte přihlášení k~jednomu panelu a ke všem spuštěným panelům.
 \item Zobrazte a skryjte popisky bloků.
 \end{enumerate}
@@ -219,8 +222,8 @@ zatrhnutou možnost \textit{Autorizovat další panely}. Tím se automaticky
 přihlásí všechny další spuštěné panely. \\ Volbu \textit{Autorizovat další
 spuštěné panely} je vhodné ručně odtrhnout v~případě, kdy se chcete přihlásit
 pouze k~jedné stanici, například jako čtenář. Pokud byste tuto volbu ponechali
-zatrhnutou, všechny ostatní spuštěné panely, na které můžete být přihlášení vy,
-se přehlásí na čtenáře a~vy tak ztratíte možnost ovládat kolejiště.}
+zatrhnutou, všechny ostatní spuštěné panely, na které můžete být přihlášeni vy,
+se přehlásí na čtenáře, a~vy tak ztratíte možnost ovládat kolejiště.}
 
 \item Jak poznáte, že je panel připojen k~serveru?
 \solution{Vlevo dole na panelu je napsáno \textit{Připojeno k~serveru}}.
@@ -254,7 +257,7 @@ potlačení trvalé?
 zaškolení (nemá login), co mu můžete povolit a co naopak nesmíte? Jak se k~němu
 máte chovat?
 \solution{Kamarád nesmí samostatně řídit stanici. Můžete ho pustit k~počítači
-a~nechat ho provádět úkony dispečera, ale musí být pod vašim trvalým dohledem.}
+a~nechat ho provádět úkony dispečera, ale musí být pod vaším trvalým dohledem.}
 
 \end{enumerate}
 
@@ -303,7 +306,7 @@ stanici?
 \item Je nutné zadávat vlaku jeho délku a~typ? Proč?
 \solution{Ano. Pro správné zastavování v~zastávkách a~u~perónů ve stanicích.}
 
-\item Na které místo ve vlaku je možné přivěsit čistící vůz?
+\item Na které místo ve vlaku je možné přivěsit čisticí vůz?
 \solution{Výhradně hned za lokomotivu.}
 
 \end{enumerate}
@@ -316,56 +319,56 @@ přestavené výhybky: ručně zastavte lokomotivu a~na panelu nouzově přestav
 výhybku.}
 
 \item Vysvětlete význam následujících symbolů na reliéfu. \\
-\includegraphics[width=0.1\textwidth]{symboly/kol1.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol2.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol2.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol3.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol4.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol22.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol8.png}
+\symbol{symboly/kol1.png}{0.1}{Popisek}
+\symbol{symboly/kol2.png}{0.1}{Popisek}
+\symbol{symboly/kol2.png}{0.1}{Popisek}
+\symbol{symboly/kol3.png}{0.1}{Popisek}
+\symbol{symboly/kol4.png}{0.1}{Popisek}
+\symbol{symboly/kol22.png}{0.1}{Popisek}
+\symbol{symboly/kol8.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/hlnav16.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav1.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav2.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav3.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav5.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav6.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav8.png}
+\symbol{symboly/hlnav16.png}{0.1}{Popisek}
+\symbol{symboly/hlnav1.png}{0.1}{Popisek}
+\symbol{symboly/hlnav2.png}{0.1}{Popisek}
+\symbol{symboly/hlnav3.png}{0.1}{Popisek}
+\symbol{symboly/hlnav5.png}{0.1}{Popisek}
+\symbol{symboly/hlnav6.png}{0.1}{Popisek}
+\symbol{symboly/hlnav8.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/senav6.png}
-\includegraphics[width=0.1\textwidth]{symboly/senav2.png}
-\includegraphics[width=0.1\textwidth]{symboly/senav3.png}
-\includegraphics[width=0.1\textwidth]{symboly/senav4.png}
-\includegraphics[width=0.1\textwidth]{symboly/senav8.png}
+\symbol{symboly/senav6.png}{0.1}{Popisek}
+\symbol{symboly/senav2.png}{0.1}{Popisek}
+\symbol{symboly/senav3.png}{0.1}{Popisek}
+\symbol{symboly/senav4.png}{0.1}{Popisek}
+\symbol{symboly/senav8.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/vyh4.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh1.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh2.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh3.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh5.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh6.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh28.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh37.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh38.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh39.png}
+\symbol{symboly/vyh4.png}{0.1}{Popisek}
+\symbol{symboly/vyh1.png}{0.1}{Popisek}
+\symbol{symboly/vyh2.png}{0.1}{Popisek}
+\symbol{symboly/vyh3.png}{0.1}{Popisek}
+\symbol{symboly/vyh5.png}{0.1}{Popisek}
+\symbol{symboly/vyh6.png}{0.1}{Popisek}
+\symbol{symboly/vyh28.png}{0.1}{Popisek}
+\symbol{symboly/vyh37.png}{0.1}{Popisek}
+\symbol{symboly/vyh38.png}{0.1}{Popisek}
+\symbol{symboly/vyh39.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/vyk19.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk1.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk2.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk3.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk4.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk5.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk6.png}
+\symbol{symboly/vyk19.png}{0.1}{Popisek}
+\symbol{symboly/vyk1.png}{0.1}{Popisek}
+\symbol{symboly/vyk2.png}{0.1}{Popisek}
+\symbol{symboly/vyk3.png}{0.1}{Popisek}
+\symbol{symboly/vyk4.png}{0.1}{Popisek}
+\symbol{symboly/vyk5.png}{0.1}{Popisek}
+\symbol{symboly/vyk6.png}{0.1}{Popisek}
 
-\includegraphics[width=0.05\textwidth]{symboly/ez6.png}
-\includegraphics[width=0.05\textwidth]{symboly/ez1.png}
-\includegraphics[width=0.05\textwidth]{symboly/ez2.png}
-\includegraphics[width=0.05\textwidth]{symboly/ez3.png}
-\includegraphics[width=0.05\textwidth]{symboly/ez5.png}
+\symbol{symboly/ez6.png}{0.05}{Popisek}
+\symbol{symboly/ez1.png}{0.05}{Popisek}
+\symbol{symboly/ez2.png}{0.05}{Popisek}
+\symbol{symboly/ez3.png}{0.05}{Popisek}
+\symbol{symboly/ez5.png}{0.05}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/prej1.png}
-\includegraphics[width=0.1\textwidth]{symboly/prej2.png}
-\includegraphics[width=0.1\textwidth]{symboly/prej3.png}
+\symbol{symboly/prej1.png}{0.1}{Popisek}
+\symbol{symboly/prej2.png}{0.1}{Popisek}
+\symbol{symboly/prej3.png}{0.1}{Popisek}
 
 \item Kdy je a~kdy není nutné žádat o~traťový souhlas?
 \solution{O~traťový souhlas není nutné žádat, pokud ho mám udělen, nebo pokud
@@ -403,7 +406,7 @@ kolejišti?
 \item Jak mohu zrušit jízdní cestu? Popište co nejvíce metod.
 \solution{(a) Volbou \texttt{RC} na návěstidle, u~které začíná jízdní cesta
 (JC). (b) Postupným nouzovým uvolněním závěrů (\texttt{NUZ}) všech úseků JC.
-Závěr staniční koleje uvolňuje automaticky (neoznačuje se volbou \texttt{NUZ}).}
+Závěr staniční koleje se uvolňuje automaticky (neoznačuje se volbou \texttt{NUZ}).}
 
 \item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta}
 a~\textit{posunová cesta}.
@@ -459,7 +462,7 @@ a oběhů vlaků?
 \solution{Neježdění nákladní dopravy × ježdění nákladní dopravy. \\
 Ježdění v~taktu × provoz podle grafikonu.}
 
-\item Popište, podle čeho se rozhodujete jaký vlak kdy a~kam poslat.
+\item Popište, podle čeho se rozhodujete, jaký vlak kdy a~kam poslat.
 \solution{Průběžně sledujete stav v~sousedních stanicích a~snažíte se jim vyjít
 vstříc. Pokud mají plno, neposíláte vlaky a~místo toho třeba posunujete. Pokud
 se do sousední stanice chystá osobní vlak, pošlete taky osobní, abyste
@@ -470,7 +473,7 @@ grafikonu.}
 \item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
 nákladní doprava funguje?
 \solution{Pokud se \textit{jezdí nákladní doprava}, každý vůz každého
-manipulačního vlaku má přesně stanoveno odkud a~kam jede. Např. \textit{první
+manipulačního vlaku má přesně stanoveno, odkud a~kam jede. Např. \textit{první
 vůz Ztr v~soupravě 804734 jede z~Čejče k~silu Uhřice}. Tyto informace jsou
 zapsány v~poznámce soupravy. Obsluhy stanic se podle nich řídí. \\ Vůz je
 považován za vyložený/naložený po průjezdu jednoho Mn vlaku: první Mn vlak vůz
@@ -591,35 +594,35 @@ kolej.
 
 \begin{enumerate}[leftmargin=*]
 \item Vysvětlete význam následujících symbolů. \\
-\includegraphics[width=0.1\textwidth]{symboly/kol5.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol7.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol20.png}
-\includegraphics[width=0.1\textwidth]{symboly/kol21.png}
+\symbol{symboly/kol5.png}{0.1}{Popisek}
+\symbol{symboly/kol7.png}{0.1}{Popisek}
+\symbol{symboly/kol20.png}{0.1}{Popisek}
+\symbol{symboly/kol21.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/hlnav9.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav15.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav17.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav18.png}
-\includegraphics[width=0.1\textwidth]{symboly/hlnav19.png}
-\includegraphics[width=0.1\textwidth]{symboly/senav14.png}
+\symbol{symboly/hlnav9.png}{0.1}{Popisek}
+\symbol{symboly/hlnav15.png}{0.1}{Popisek}
+\symbol{symboly/hlnav17.png}{0.1}{Popisek}
+\symbol{symboly/hlnav18.png}{0.1}{Popisek}
+\symbol{symboly/hlnav19.png}{0.1}{Popisek}
+\symbol{symboly/senav14.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/vyh7.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh8.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh14.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh21.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh22.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh23.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh24.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh25.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh26.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyh27.png}
+\symbol{symboly/vyh7.png}{0.1}{Popisek}
+\symbol{symboly/vyh8.png}{0.1}{Popisek}
+\symbol{symboly/vyh14.png}{0.1}{Popisek}
+\symbol{symboly/vyh21.png}{0.1}{Popisek}
+\symbol{symboly/vyh22.png}{0.1}{Popisek}
+\symbol{symboly/vyh23.png}{0.1}{Popisek}
+\symbol{symboly/vyh24.png}{0.1}{Popisek}
+\symbol{symboly/vyh25.png}{0.1}{Popisek}
+\symbol{symboly/vyh26.png}{0.1}{Popisek}
+\symbol{symboly/vyh27.png}{0.1}{Popisek}
 
-\includegraphics[width=0.1\textwidth]{symboly/vyk9.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk10.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk11.png}
-\includegraphics[width=0.1\textwidth]{symboly/vyk17.png}
+\symbol{symboly/vyk9.png}{0.1}{Popisek}
+\symbol{symboly/vyk10.png}{0.1}{Popisek}
+\symbol{symboly/vyk11.png}{0.1}{Popisek}
+\symbol{symboly/vyk17.png}{0.1}{Popisek}
 
-\includegraphics[width=0.05\textwidth]{symboly/ez4.png}
+\symbol{symboly/ez4.png}{0.05}{Popisek}
 
 \item Nouzové závěry kterých bloků se automaticky neruší při volbě \textit{RNZ
 – rušení nouzových závěrů} a~je třeba je zrušit ručně?
