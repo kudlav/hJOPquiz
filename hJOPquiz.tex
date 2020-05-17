@@ -1,17 +1,24 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[ pdfauthor={Jan Horacek}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Carlito} % Cambria on linux
+% \setmonofont{Consolas} % Uncommon font for linux
+\def\uv#1{„#1“}
+
+\usepackage[ unicode
+           , pdfauthor={Jan Horáček}
            , pdftitle={hJOPquiz},
-           , pdfsubject={Kviz testujici schopnost ridit hJOP},
+           , pdfsubject={Kvíz testující schopnost řídit hJOP},
            , plainpages=false
            , pdfpagelabels
-           , unicode
            , draft=false
            , colorlinks=false
            , unicode=true
            ]{hyperref}
-\usepackage[czech]{babel}
-\usepackage{lmodern}
 \usepackage{graphicx}
+
 \usepackage{microtype}
 \usepackage{enumitem}
 \usepackage{titling}
