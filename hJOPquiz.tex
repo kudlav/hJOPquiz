@@ -30,8 +30,13 @@
 \def\solution#1{\ifsolution \par{\color{gray}#1}\fi}
 
 \def\symbol#1#2#3{ % filename, scale, description
-    \includegraphics[width=#2\textwidth]{#1}
-    \ifsolution \parbox{.3\textwidth}{\color{gray}\raggedright #3}\fi
+    \ifsolution
+       \parbox[t]{.305\linewidth}{\parskip 0pt\centering\includegraphics[width=#2\textwidth]{#1}\par%
+       \vskip -5pt\vrule height 0pt depth 3\baselineskip width 0pt\vtop{\color{gray}
+                #3\vfill}}\quad
+    \else
+       \includegraphics[width=#2\textwidth]{#1}%
+    \fi
 }
 
 
@@ -386,7 +391,7 @@ jsem přihlášený do obou stanic tratě.}
 výhybky. Závěr se uděluje na bloky v~jízdní cestě. Na výhybky, výkolejky a
 úvazky lze ručně udělit nouzový závěr volbou \texttt{ZAV>} v~menu bloku.}
 
-\item Sousední stanice mě žádá o~traťový souhlas, vy ho však chcete přijmout až
+\item Sousední stanice vás žádá o~traťový souhlas, vy ho však chcete přijmout až
 za minutu, jak nejlépe sdělit sousední stanici, že má počkat?
 \solution{Napsat zprávu, zavolat, případně nechat žádost minutu pípat.
 Zvuk žádosti lze dočasně potlačit klikem na ikonu v~horním panelu.}
