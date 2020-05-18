@@ -27,11 +27,11 @@
 \topmargin -1.3cm
 \oddsidemargin 0cm
 
-\def\solution#1{\ifsolution \par{\color{gray}#1}\fi}
+\def\solution#1{\ifsolution \par\vskip-\parskip{\color{gray}#1}\fi}
 
 \def\symbol#1#2#3{ % filename, scale, description
     \ifsolution
-       \parbox[t]{.305\linewidth}{\parskip 0pt\centering\includegraphics[width=#2\textwidth]{#1}\par%
+       \parbox[t]{.305\linewidth}{\parskip 0pt\centering\includegraphics[width=#2\textwidth]{#1}\par
        \vskip -5pt\vrule height 0pt depth 3\baselineskip width 0pt\vtop{\color{gray}
                 #3\vfill}}\quad
     \else
