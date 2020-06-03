@@ -49,7 +49,8 @@
 
 \title{\bfseries
 {\Large Ovládání kolejiště pomocí hJOP\\}
-{\LARGE Podklady pro zkoušku oprávnění řízení\\}
+{\LARGE Podklady pro zkoušku oprávnění řízení\\
+bez oprávnění regulátoru\\}
 \ifsolution
 {\Large \color{gray}včetně řešení\\}
 \fi
@@ -82,61 +83,6 @@ A.
 Školitel vybere otázky z~tohoto dokumentu a~nechá nováčka odpovědět. Školitel
 provede s~no\-váč\-kem praktickou část zkoušky.
 \item Školitel přidává login nováčka do hJOPserveru, nováček je oprávněn řídit.
-\end{enumerate}
-
-\newpage
-
-\section{S0 – strojvedoucí hJOPdriver}
-
-Opravňuje k~řízení vlaků přes mobilní aplikaci hJOPdriver.
-
-\subsection{Praktická část}
-
-\begin{enumerate}[leftmargin=*]
-\item Proveďte převzetí vlaku na ruční řízení.
-\item Proveďte uvolnění vlaku z~aplikace.
-\item Demonstrujte řízení lokomotiv v~multitrakci.
-\item Vysvětlete obsah sešitového jízdního řádu.
-\item Demonstrujte komunikaci s~výpravčím.
-\item Demonstrujte poznání trati, ukažte polohy jednotlivých návěstidel.
-\end{enumerate}
-
-\subsection{Teoretická část}
-\begin{enumerate}[leftmargin=*]
-\item K~čemu slouží v~ovladači volba \textit{Ruční řízení}?
-\solution{Při nezaškrtnutém \textit{Ručním řízení} řídíte pouze funkce, nikoliv
-jízdu. Po zaškrtnutí \textit{Ruční řízení} řídíte i~jízdu vlaku.}
-
-\item Kdy má v~řízení jízdy přednost ovladač a kdy počítač?
-\solution{Pokud je zaškrtnuto \textit{Ruční řízení}, řídíte jízdu vlaku
-výhradně vy, příkazy počítače se ignorují. Pokud je volba \textit{Ruční řízení}
-odškrtnutá, jízdu řídí počítač, funkce však řídíte vy (funkce počítače se
-ignorují nezávisle na zaškrtnutí \textit{Ruční řízení}).}
-
-\item Pouští počítač automaticky funkce houkání apod., když je HV na ovladači?
-\solution{Ne. Funkce jsou vždy na strojvedoucím.}
-
-\item Jaká specifika platí pro řízení jízdy vlaku s~více lokomotivami v~multitrakci?
-\solution{U~všech lokomotiv, které chcete řídit v~multitrakci, musíte
-zaškrtnout \textit{Multitrakce}. Funkce se řídí zvlášť, směr se řídí zvlášť,
-rychlost se řídí dohromady. Po dokončení řízení musíte uvolnit všechny
-lokomotivy.}
-
-\item Popište, jak poznáte, kam až smíte s~vlakem jet.
-\solution{Strojvedoucí musí kontrolovat všechna návěstidla ve své cestě a~řídit
-se jimi. Pokud nejsou návěstidla fyzicky osazena, musí se domluvit
-s~dispečerem, kam až smí jet, nebo si otevřít panel obvodu, ve kterém se
-pohybuje, a kontrolovat návěsti na něm.}
-
-\item Co se stane při ztrátě wifi spojení?
-\solution{Řízené lokomotivy se navrátí do kontroly počítače.}
-
-\item Co se stane při otevření jiné aplikace?
-\solution{Všechny řízené lokomotivy plynule zastaví.}
-
-\item Co se stane při přetočení displeje?
-\solution{Všechny řízené lokomotivy plynule zastaví.}
-
 \end{enumerate}
 
 \newpage
@@ -184,34 +130,15 @@ význam tohoto seznamu.
 \begin{enumerate}[leftmargin=*]
 \item Proveďte ruční přestavení výhybky.
 \item Proveďte nouzové ruční přestavení výhybky.
-\item Vyřešte uvázlý vagón v~trati.
 \item Proveďte nouzové uvolnění závěrů úseků. Vysvětlete, kdy se takové uvolnění
 provádí.
 \item Demonstrujte obsluhu rozpojovačů.
 \item Zaveďte štítek na úseku.
 \end{enumerate}
 
-\subsubsection*{Jízdní cesty}
-\begin{enumerate}[leftmargin=*]
-\item Proveďte zrušení JC. Ukažte co nejvíce postupů.
-\item Demonstrujte posun ve stanici.
-\item Proveďte obsluhu vlaku v~ručním režimu řízení, včetně stavění jízdních
-cest.
-\end{enumerate}
-
-\subsubsection*{Ruční řízení}
-\begin{enumerate}[leftmargin=*]
-\item Předveďte ruční řízení vlaku přes aplikaci Jerry.
-\item Předveďte komunikaci se strojvedoucím.
-\item Demonstrujte násilné převzetí soupravy od strojvedoucího.
-\end{enumerate}
-
 \subsubsection*{Krizové scénáře}
 \begin{enumerate}[leftmargin=*]
 \item Proveďte nouzové zastavení provozu na celém kolejišti.
-\item Proveďte nouzové zastavení jedné lokomotivy.
-\item Vyřešte situaci, kdy vlak přejel do následujícího kolejového obvodu.
-\item Vyřešte situaci, kdy vlak rozřezal výhybku a způsobil zkrat.
 \end{enumerate}
 
 \subsubsection*{Poznání}
@@ -411,14 +338,6 @@ koleje na reliéfu je kolej bez indikace obsazení.}
 
 \subsubsection*{Jízdní cesty}
 \begin{enumerate}[leftmargin=*]
-\item Má mít vlak v~ručním řízení postavenou jízdní cestu pro jízdu na
-kolejišti?
-\solution{Ano, vždy musí mít.}
-
-\item Jak mohu zrušit jízdní cestu? Popište co nejvíce metod.
-\solution{(a) Volbou \texttt{RC} na návěstidle, u~které začíná jízdní cesta
-(JC). (b) Postupným nouzovým uvolněním závěrů (\texttt{NUZ}) všech úseků JC.
-Závěr staniční koleje se uvolňuje automaticky (neoznačuje se volbou \texttt{NUZ}).}
 
 \item Popište vztah mezi pojmy \textit{jízdní cesta}, \textit{vlaková cesta}
 a~\textit{posunová cesta}.
@@ -427,21 +346,9 @@ a~\textit{posunová cesta}.
 
 \end{enumerate}
 
-\subsubsection*{Ruční řízení}
-\begin{enumerate}[leftmargin=*]
-\item Vyjmenujte všechny možnosti, jak řídit lokomotivu ručně.
-\solution{(a) Skrze aplikaci Jerry. (b) Skrze aplikaci hJOPdriver. (c) Pomocí
-Roco Multimaus a~uLI.}
-
-\item Co znamená, když je v~ovladači zaškrtnuto \textit{ruční řízení}
-a k~čemu vás to opravňuje?
-\solution{\textit{Ruční řízení} znamená, že řídíte jízdu vlaku.}
-
-\end{enumerate}
-
 \subsubsection*{Krizové scénáře}
 \begin{enumerate}[leftmargin=*]
-\item Jako posunovač máte volnou chvíli, ohlédnete se do sousední stanice
+\item Ohlédnete se do sousední stanice
 a~vidíte, že dva vlaky jedou proti sobě a~nezpomalují, přibližně za 5 s~do sebe
 narazí. Co uděláte?
 \solution{Klik na červenou ikonku na horní liště panelu \textit{Zastavit DCC
@@ -482,35 +389,6 @@ modelovali přípoje atp. Ideální je si na začátku směny se sousedními sta
 dohodnout takt (např. \uv{jeden vlak za jeden vlak}), případně jezdit podle
 grafikonu.}
 
-\item Co to znamená, že se na kolejišti \textit{jezdí nákladní doprava} a~jak
-nákladní doprava funguje?
-\solution{Pokud se \textit{jezdí nákladní doprava}, každý vůz každého
-manipulačního vlaku má přesně stanoveno, odkud a~kam jede. Např. \textit{první
-vůz Ztr v~soupravě 804734 jede z~Čejče k~silu Uhřice}. Tyto informace jsou
-zapsány v~poznámce soupravy. Obsluhy stanic se podle nich řídí. \\ Vůz je
-považován za vyložený/naložený po průjezdu jednoho Mn vlaku: první Mn vlak vůz
-přiveze, po druhý vlak zůstává vůz ve stanici, třetí Mn vlak vůz odváží.}
-
-\item Kde se dozvíte, jaké zboží a~jakými vozy stanice vyváží a~dováží?
-\solution{\textit{Platné pouze pro modulovku TT} \\ Na každé stanici je výtisk
-datových listů. Dostupné také online:\\
-\url{https://github.com/kmzbrnoI/ds-tt/releases}}.
-
-\item Které úkony je nutné vykonat k~řádnému zpracování manipulačního vlaku,
-který vám právě přijel do stanice? Zpracování manipulačního vlaku končí
-v~momentě jeho odjezdu ze stanice.
-\solution{\textit{Relevantní pouze při ježdění nákladní dopravy.} \\ V~editaci
-vlaku je v~poznámce k~soupravě uvedeno, jak naložit s~jednotlivými vagóny.
-Vyřešte požadavky, které se týkají vaši stanice (připojení a~odpojení vozů).
-Přidejte do soupravy vagóny dle poptávky ar~plánů. Upravte počet vozů, délku
-vlaku a~popis vagónů dle změn.}
-
-\item Potřebujete lokomotivní zálohu z~výtopny/depa, jak ji získáte?
-\solution{Zavoláte/napíšete do depa a~zálohu si vyžádáte.}
-
-\item Kam píšete nákladní vozy ve vlaku?
-\solution{V~editaci vlaku do pole \textit{Poznámky} k~soupravě.}
-
 \end{enumerate}
 
 \subsubsection*{Další}
@@ -531,157 +409,7 @@ podmínek.}
 \end{enumerate}
 
 
-\newpage
-\section{S1u – dispečer řízení jízdy přes uLI}
-
-Musí být součástí zaškolení úrovně S1 pro kolejiště, kde se používají
-uLI-daemon.
-
-\subsection{Praktická část}
-
-\begin{enumerate}[leftmargin=*]
-\item Proveďte převzetí, řízení a uvolnění soupravy na Roco Multimaus.
-\end{enumerate}
-
-\subsection{Teoretická část}
-
-\begin{enumerate}[leftmargin=*]
-
-\item Co je to \textit{uLI-daemon} a~jakou má funkci?
-\solution{Je to aplikace umožňující funkci uLI-master. Spouští se se startem
-prvního panelu na dispečerském počítači, při nechtěném ukončení lze znovu
-zapnout ikonkou na horní liště panelu.}
-
-\item Co je to \textit{uLI-master} a~jakou má funkci?
-\solution{Je to černá krabička rozměru 7×5 cm, umožňující připojení Roco
-Multimaus k~počítači se spuštěným panelem a uLI-daemonem.}
-
-\item Ikonka mašinky na Roco Multimaus bliká, co to znamená?
-\solution{Multimaus neovládá žádnou lokomotivu.}
-
-\item Ikonka mašinky na Roco Multimaus trvale svítí, mašinka přesto nereaguje,
-co je špatně?
-\solution{Může to znamenat, že není zaškrtnuto \textit{Ruční řízení} (tedy, že
-ovládáte pouze funkce a~nikoliv jízdu) nebo lokomotiva/y uvízla na špíně nebo
-jste na ovladač přidělili špatnou lokomotivu/y.}
-
-\end{enumerate}
-
-
-\newpage
-\section{S2 – pokročilý dispečer}
-
-Opravňuje k~řízení větších stanic. Obsahuje otázky na veškerou funkcionalitu,
-kterou umí hJOP nabídnout.
-
-\subsection{Praktická část}
-
-\begin{enumerate}[leftmargin=*]
-\item Demonstrujte zapnutí a~vypnutí kolejiště a~serveru.
-\item Rozsviťte přivolávací návěst na návěstidle bez postavení nouzové cesty.
-\item Proveďte příjem vlaku na obsazenou kolej včetně zrušení nouzové cesty.
-\item Ručně uzavřete přejezd.
-\item Proveďte nouzové otevření přejezdu.
-\item Vytvořte a zrušte soupravu s~více lokomotivami.
-\item Přidejte na kolej více souprav.
-\item Přesuňte soupravu na jinou kolej.
-\item Prohoďte soupravy na jedné koleji.
-\item Proveďte vytvoření nové lokomotivy.
-\item Proveďte úpravu dat lokomotivy.
-\item Zjistěte, kde se nachází lokomotiva s~danou adresou.
-\item Nastavte modelový čas, zapněte jej a vypněte jej.
-\item Předveďte práci se zásobníkem povelů: přidání povelu, pozastavení
-zásobníku, smazání povelu, přesun povelů.
-\item Proveďte maximálně možně zabezpečený nouzový vjezd vlaku na manipulační
-kolej.
-\item Demonstrujte multitrakci v~ručním ovladači.
-\item Zaveďte předvídaný odjezd vlaku.
-\item Zaveďte na návěstidle režim AB, zrušte režim AB.
-\item Postavte JC s~variantními body.
-\item Postavte složenou JC s~variantními body.
-\end{enumerate}
-
-\newpage
-\subsection{Teoretická část}
-
-\begin{enumerate}[leftmargin=*]
-\item Vysvětlete význam následujících symbolů. \\
-\symbol{symboly/kol5.png}{0.1}{Kolej volná + nerozlišený závěr.}
-\symbol{symboly/kol7.png}{0.1}{Volná + nerozlišený závěr + varovný štítek.}
-\symbol{symboly/kol20.png}{0.1}{Volná + výluka.}
-\symbol{symboly/kol21.png}{0.1}{Volná + varovný štítek.}
-
-\symbol{symboly/hlnav9.png}{0.1}{Povolující návěst pro vlak (mimo PN) + volba
-vlakové cesty.}
-\symbol{symboly/hlnav15.png}{0.1}{Základní stav + volba nouzové cesty.}
-\symbol{symboly/hlnav17.png}{0.1}{Povolující návěst pro vlak (mimo PN) +
-aktivní režim AB.}
-\symbol{symboly/hlnav18.png}{0.1}{Základní stav + aktivní režim AB.}
-\symbol{symboly/hlnav19.png}{0.1}{Zhaslé/změna návěsti + aktivní režim AB.}
-\symbol{symboly/senav14.png}{0.1}{Základní stav seřaďovacího návěstidla + volba
-nouzové posunové cesty.}
-
-\symbol{symboly/vyh7.png}{0.1}{Úsek obsazen + nouzový závěr výhybky.}
-\symbol{symboly/vyh8.png}{0.1}{Úsek obsazen + nouzový závěr výhybky + ztráta
-dohledu.}
-\symbol{symboly/vyh14.png}{0.1}{Úsek volný + výhybka hlásí obě polohy.}
-\symbol{symboly/vyh21.png}{0.1}{Závěr vlakové cesty + nouzový závěr výhybky +
-úsek volný.}
-\symbol{symboly/vyh22.png}{0.1}{Závěr posunové cesty + nouzový závěr + úsek
-volný.}
-\symbol{symboly/vyh23.png}{0.1}{Nerozlišený závěr jízdní cesty + úsek volný
-(potenciálně nouzový závěr výhybky).}
-\symbol{symboly/vyh24.png}{0.1}{Nerozlišený závěr jízdní cesty + úsek volný +
-varovný štítek.}
-\symbol{symboly/vyh25.png}{0.1}{Varovný štítek + úsek volný + ztráta dohledu.}
-\symbol{symboly/vyh26.png}{0.1}{Výluka + nouzový závěr výhybky + úsek volný.}
-\symbol{symboly/vyh27.png}{0.1}{Výluka + nouzový závěr výhybky + úsek volný +
-ztráta dohledu.}
-
-\symbol{symboly/vyk9.png}{0.1}{Nouzový závěr výkolejky + úsek volný.}
-\symbol{symboly/vyk10.png}{0.1}{Nouzový závěr + úsek obsazen + varovný štítek.}
-\symbol{symboly/vyk11.png}{0.1}{Nouzový závěr + úsek obsazen + varovný štítek +
-ztráta dohledu.}
-\symbol{symboly/vyk17.png}{0.1}{Nouzový závěr + úsek volný + výluka.}
-
-\symbol{symboly/ez4.png}{0.05}{Klíč vyjmut + varovný štítek.}
-
-\item Nouzové závěry kterých bloků se automaticky neruší při volbě \textit{RNZ
-– rušení nouzových závěrů} a~je třeba je zrušit ručně?
-\solution{Závěr trati, uzavření přejezdu, závěr zámků.}
-
-\item Jaké všechny povely lze vkládat do zásobníku povelů?
-\solution{Stavění jízdní cesty (vlakové i~posunové cesty), žádost o~traťový
-souhlas, udělení traťového souhlasu.}
-
-\item Zásobník povelů je přepnutý do volby \textit{PV}, je zásobník aktivní?
-\solution{Ne. Dočasné přepnutí zásobníku do volby \textit{PV} se používá
-k~dočasnému pozastavení funkce zásobníku, například při nutnosti aktuálně
-vykonat prioritní povel.}
-
-\item Mohu vypnout napájecí zdroj stanice za plného provozu? Co po vypnutí
-napájení udělá ovládací panel?
-\solution{Ano, je to možné, ale zastaví to provoz v~celém napájeném úseku.
-Symboly na reliéfu zfialoví.}
-
-\item Mohu při restartu hJOP nechat vlaky v~trati?
-\solution{Ano, vlaky můžou zůstat kdekoliv. Při běžné vypínání kolejiště se
-doporučuje dojet do stanic.}
-
-\item Na jaké úseky lze a~na jaké nelze přesouvat vlaky?
-\solution{Vlaky lze přesouvat na staniční koleje a~některé vlečky. Na zbylé
-úseky (zhlaví,  záhlaví, trať, ...) soupravy přesouvat nelze.}
-
-\item Vysvětlete barvy soupravy předvídaného odjezdu vlaku.
-\solution{
-Inverzní pozadí a popředí: odpočet času nezačal plynout. \\
-Modré pozadí: do odjezdu zbývá více než 30 s. \\
-Žluté pozadí: do odjezdu zbývá méně než 30 s.}
-
-\item Vysvětlete chování režimu AB u~návěstidla.
-\solution{Režim AB je spojený s~návěstidlem a~konkrétní jízdní cestou. Tento
-režim opakovaně staví jízdní cestu po jejím projetí.}
-
+\newpag
 \end{enumerate}
 
 \end{document}
